@@ -114,9 +114,6 @@ This will be a challenge as we will be creating this by scratch. This product is
 
 
 ## Wireframes
-
-[Add picture of your hand sketched wireframes in this section]
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
 ![](https://hackmd.io/_uploads/BJvZgCSMp.png)
 ![](https://hackmd.io/_uploads/Hykfg0rGp.png)
 

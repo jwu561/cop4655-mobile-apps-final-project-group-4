@@ -7,7 +7,7 @@ Group 4:
 Justin Rivera
 Kevin Infante
 Kazrious Harper
-Jonathan Wu -Testing by commiting and pushing
+Jonathan Wu 
 
 ## Table of Contents
 

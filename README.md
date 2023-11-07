@@ -121,7 +121,7 @@ This will be a challenge as we will be creating this by scratch. This product is
 
 ### [BONUS] Digital Wireframes & Mockups
 ### Current Gif
-![Beginning Product](https://imgur.com/a/c40sgRp.gif)
+![Beginning Product](<blockquote class="imgur-embed-pub" lang="en" data-id="ZMzj3Ez" data-context="false" ><a href="//imgur.com/ZMzj3Ez"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>)
 
 
 

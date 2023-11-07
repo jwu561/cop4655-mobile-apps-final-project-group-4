@@ -120,7 +120,7 @@ This will be a challenge as we will be creating this by scratch. This product is
 
 
 ### [BONUS] Digital Wireframes & Mockups
-### Current Gif
+### Current Product
 ![Beginning Product](https://github.com/COP4655-MobileApps-Fall2023/cop4655-mobile-apps-final-project-group-4/assets/124208345/6e338ed3-60c4-4da2-8eed-d822ff1943d1)
 
 

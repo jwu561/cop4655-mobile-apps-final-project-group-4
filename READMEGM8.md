@@ -1,1 +1,24 @@
-
+User Stories
+- [X] Milestone 1 Activity 1: Product Spec
+- [X] Milestone 1 Activity 2: Wireframing
+- [X] Milestone 2 Activity 1: Create Project Board
+- [X] Milestone 1 Activity 2: Create Milestones
+- [X] Milestone 2 Activity 3: Create Issues from App Features
+- [X] Milestone 2 Activity 4: Add Issues as cards to the Project Board
+- [X] Milestone 2 Activity 5: Begin Developing!
+- [X] Milestone 3 Activity 1: Update Project Board, Sprint Plans, and Github Repo
+- [ ] Create Standard Game View Navigator
+- [ ] Milestone 3 Activity 2: Required feature: implement LookAround (streetview) for 3 cities
+- [ ] Milestone 3 Activity 3: Required Feature: Create a new screen (UIView) with the layout for a question
+- [ ] Required Feature: Add a 'random city' API call
+- [ ] Create Game Mode navigator
+- [ ] Create Login Navigator
+- [ ] Create "Create Account" navigator
+- [ ] Create Scores navigator
+- [ ] Implement Tab Bar Controller
+- [ ] Create No Hints Game navigator
+- [ ] Create One Change Game navigator
+- [ ] Implement Backend
+- [ ] Milestone 3 Activity 4: Demo Day Prep
+- [ ] Milestone 4 Activity 1: Submit App
+      

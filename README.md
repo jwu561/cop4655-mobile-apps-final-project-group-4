@@ -121,7 +121,7 @@ This will be a challenge as we will be creating this by scratch. This product is
 
 ### [BONUS] Digital Wireframes & Mockups
 ### Current Gif
-![Beginning Product](https://imgur.com/a/c40sgRp)
+![Beginning Product](https://imgur.com/a/c40sgRp.gif)
 
 
 

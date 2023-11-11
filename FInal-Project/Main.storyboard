@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oCt-JW-mRs">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Look around view controllers" minToolsVersion="14.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--screen1-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="screen1" id="BYZ-38-t0r" customClass="ViewController" customModule="testingMap" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PLH-Vx-bqu">
+                                <rect key="frame" x="131" y="354" width="131" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="San Francisco"/>
+                                <connections>
+                                    <action selector="cityBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ctW-Mh-EcW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Do-AR-tBn">
+                                <rect key="frame" x="131" y="419" width="132" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="New York CIty"/>
+                                <connections>
+                                    <action selector="cityBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E4g-nc-DPY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4dG-Wk-bg3">
+                                <rect key="frame" x="162" y="487" width="70" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Miami"/>
+                                <connections>
+                                    <action selector="cityBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0d4-Wo-1rn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Screen1" id="P8x-VM-t6g"/>
+                    <connections>
+                        <outlet property="miamiBtn" destination="4dG-Wk-bg3" id="IoE-r1-EY7"/>
+                        <outlet property="newYorkCityBtn" destination="0Do-AR-tBn" id="fuR-2d-49A"/>
+                        <outlet property="sanFranciscoBtn" destination="PLH-Vx-bqu" id="SK6-bB-mmd"/>
+                        <segue destination="QUP-3F-3rV" kind="show" identifier="lookAroundSegue" id="IJr-0v-8I1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1028.2442748091603" y="3.5211267605633805"/>
+        </scene>
+        <!--Look Around View Controller-->
+        <scene sceneID="pil-jp-8Pp">
+            <objects>
+                <lookAroundViewController id="QUP-3F-3rV" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="lpy-Bi-Jxo"/>
+                </lookAroundViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r7g-GD-i9I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1028" y="735"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gRQ-3S-4Nv">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oCt-JW-mRs" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Yfz-P1-kxY">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Czm-Dl-CtD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1bc-fb-3gB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="101.5267175572519" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

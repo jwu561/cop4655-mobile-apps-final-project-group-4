@@ -12,7 +12,7 @@
         <!--screen1-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="screen1" id="BYZ-38-t0r" customClass="ViewController" customModule="testingMap" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="screen1" id="BYZ-38-t0r" customClass="ViewController" customModule="FInal_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -44,12 +44,22 @@
                                     <action selector="cityBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0d4-Wo-1rn"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u3N-oW-3fh">
+                                <rect key="frame" x="98" y="230" width="194" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Look Around New City"/>
+                                <connections>
+                                    <action selector="lookAroundTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dae-mO-v5I"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Screen1" id="P8x-VM-t6g"/>
                     <connections>
+                        <outlet property="lookAround" destination="u3N-oW-3fh" id="cje-im-7pK"/>
                         <outlet property="miamiBtn" destination="4dG-Wk-bg3" id="IoE-r1-EY7"/>
                         <outlet property="newYorkCityBtn" destination="0Do-AR-tBn" id="fuR-2d-49A"/>
                         <outlet property="sanFranciscoBtn" destination="PLH-Vx-bqu" id="SK6-bB-mmd"/>

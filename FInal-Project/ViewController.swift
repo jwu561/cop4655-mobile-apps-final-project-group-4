@@ -8,6 +8,16 @@
 import UIKit
 import MapKit
 
+var viewedCities: [City] = []
+// .isEmpty is an array property
+// .count is an array property
+// .first and .last are obvious
+//.randomElement() returns random element
+//.append()
+//.insert("", at: int)
+//.removeLast()
+//.remove(at: int)
+//.contains(element) returns true if array contains said alement
 
 class ViewController: UIViewController {
     
@@ -25,7 +35,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var sanFranciscoBtn: UIButton!
     @IBOutlet weak var newYorkCityBtn: UIButton!
     @IBOutlet weak var miamiBtn: UIButton!
-    
+    @IBOutlet weak var lookAround: UIButton!
     
     
     //    @IBAction func newScreenBtnTapped(_ sender: Any) {
@@ -42,6 +52,27 @@ class ViewController: UIViewController {
     //        performSegue(withIdentifier: "lookAroundSegue", sender: nil)
     //
     //    }
+    
+    @IBAction func lookAroundTapped(_ sender: Any) {
+        //if item is contained in array, increment (and loop)
+        //if is not, add it and fetchlookaround scene
+        
+        if (viewedCities.count == Cities.count){
+            print("No more cities on the list!")
+        }
+        for city in Cities {
+            if (viewedCities.contains(city)){
+                continue
+            }
+            else {
+                viewedCities.append(city)
+                fetchLookAroundScene(with: CLLocationCoordinate2D(latitude: city.latitude, longitude: city.longitude))
+                performSegue(withIdentifier: "lookAroundSegue", sender: nil)
+                break
+            }
+        }
+    }
+    
     
     @IBAction func cityBtnTapped(_ sender: UIButton) {
         print("city button tapped")
@@ -81,6 +112,10 @@ class ViewController: UIViewController {
                 print("Error fetching LookAround scene: \(error)")
             }
         }
+    }
+    override func viewDidLoad() {
+        print(miami.name, miami.country, miami.latitude, miami.longitude)
+        super.viewDidLoad()
     }
 }
 

@@ -18,6 +18,7 @@ var viewedCities: [City] = []
 //.removeLast()
 //.remove(at: int)
 //.contains(element) returns true if array contains said alement
+var currentCity: City?
 
 class ViewController: UIViewController {
     
@@ -60,15 +61,37 @@ class ViewController: UIViewController {
         if (viewedCities.count == Cities.count){
             print("No more cities on the list!")
         }
-        for city in Cities {
-            if (viewedCities.contains(city)){
-                continue
+//        for city in Cities {
+//            if (viewedCities.contains(city)){
+//                continue
+//            }
+//            else {
+//                viewedCities.append(city)
+//                fetchLookAroundScene(with: CLLocationCoordinate2D(latitude: city.latitude, longitude: city.longitude))
+//                performSegue(withIdentifier: "lookAroundSegue", sender: nil)
+//                break
+//            }
+//        }
+        
+        currentCity = Cities.randomElement()
+        //if viewedCities doesn't contain current city, add it to list and perform look around
+        if(!viewedCities.contains(currentCity!)){
+            viewedCities.append(currentCity!)
+            fetchLookAroundScene(with: CLLocationCoordinate2D(latitude: currentCity!.latitude, longitude: currentCity!.longitude))
+            performSegue(withIdentifier: "lookAroundSegue", sender: nil)
+        }
+        //else, do while loop until current City is not in viewedCities, or until viewedCities contains all cities.
+        else{
+            while(viewedCities.contains(currentCity!) || viewedCities.count == Cities.count){
+                currentCity = Cities.randomElement()
             }
-            else {
-                viewedCities.append(city)
-                fetchLookAroundScene(with: CLLocationCoordinate2D(latitude: city.latitude, longitude: city.longitude))
+            if(viewedCities.count == Cities.count){
+                print("No more cities on the list!")
+            }
+            else{
+                viewedCities.append(currentCity!)
+                fetchLookAroundScene(with: CLLocationCoordinate2D(latitude: currentCity!.latitude, longitude: currentCity!.longitude))
                 performSegue(withIdentifier: "lookAroundSegue", sender: nil)
-                break
             }
         }
     }

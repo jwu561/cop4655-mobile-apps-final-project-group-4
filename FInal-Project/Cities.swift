@@ -29,7 +29,7 @@ var Cities = [miami, nyc, sanFran, barca, paris, berlin]
 
 var miami = City(name: "Miami", latitude: 25.7617, longitude: -80.1918, country: "United States of America")
 var nyc = City(name: "New York City", latitude: 40.75780, longitude: -73.9855, country: "United States of America")
-var sanFran = City(name: "San Francisco", latitude: 37.7749, longitude: -122.4194, country: "Unites States of America")
+var sanFran = City(name: "San Francisco", latitude: 37.7749, longitude: -122.4194, country: "United States of America")
 //51.5007° N, 0.1246° W
 //51.5045° N, 0.0865° W
 var barca = City(name: "Barcelona", latitude: 41.3874, longitude: 2.1686, country: "Spain")

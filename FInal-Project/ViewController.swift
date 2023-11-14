@@ -18,7 +18,9 @@ var viewedCities: [City] = []
 //.removeLast()
 //.remove(at: int)
 //.contains(element) returns true if array contains said alement
+
 var currentCity: City?
+var currentQuestion = 1
 
 class ViewController: UIViewController {
     
@@ -32,86 +34,76 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBOutlet weak var questionLabel: UILabel!
     
-    @IBOutlet weak var sanFranciscoBtn: UIButton!
-    @IBOutlet weak var newYorkCityBtn: UIButton!
-    @IBOutlet weak var miamiBtn: UIButton!
+    @IBOutlet weak var buttonA: UIButton!
+    @IBOutlet weak var buttonB: UIButton!
+    @IBOutlet weak var buttonC: UIButton!
+    @IBOutlet weak var buttonD: UIButton!
+    
     @IBOutlet weak var lookAround: UIButton!
     
-    
-    //    @IBAction func newScreenBtnTapped(_ sender: Any) {
-    //        print("new screen button tapped")
-    //        performSegue(withIdentifier: "looky", sender: nil)
-    //
-    //    }
-    
-    //    @IBAction func lookAroundTapped(_ sender: Any) {
-    //        print("look around tapped")
-    //
-    //
-    //        fetchLookAroundScene()
-    //        performSegue(withIdentifier: "lookAroundSegue", sender: nil)
-    //
-    //    }
+
     
     @IBAction func lookAroundTapped(_ sender: Any) {
-        //if item is contained in array, increment (and loop)
-        //if is not, add it and fetchlookaround scene
-        
-        if (viewedCities.count == Cities.count){
-            print("No more cities on the list!")
+        if(viewedCities.count == Cities.count){
+            print("no more cities on the list. You have reached the end of the quiz.")
+            return
         }
-//        for city in Cities {
-//            if (viewedCities.contains(city)){
-//                continue
-//            }
-//            else {
-//                viewedCities.append(city)
-//                fetchLookAroundScene(with: CLLocationCoordinate2D(latitude: city.latitude, longitude: city.longitude))
-//                performSegue(withIdentifier: "lookAroundSegue", sender: nil)
-//                break
-//            }
-//        }
-        
-        currentCity = Cities.randomElement()
-        //if viewedCities doesn't contain current city, add it to list and perform look around
-        if(!viewedCities.contains(currentCity!)){
-            viewedCities.append(currentCity!)
-            fetchLookAroundScene(with: CLLocationCoordinate2D(latitude: currentCity!.latitude, longitude: currentCity!.longitude))
-            performSegue(withIdentifier: "lookAroundSegue", sender: nil)
-        }
-        //else, do while loop until current City is not in viewedCities, or until viewedCities contains all cities.
-        else{
-            while(viewedCities.contains(currentCity!) || viewedCities.count == Cities.count){
-                currentCity = Cities.randomElement()
-            }
-            if(viewedCities.count == Cities.count){
-                print("No more cities on the list!")
-            }
-            else{
-                viewedCities.append(currentCity!)
-                fetchLookAroundScene(with: CLLocationCoordinate2D(latitude: currentCity!.latitude, longitude: currentCity!.longitude))
-                performSegue(withIdentifier: "lookAroundSegue", sender: nil)
-            }
-        }
+        print("viewed cities: ", viewedCities.count)
+        fetchLookAroundScene(with: CLLocationCoordinate2D(latitude: currentCity!.latitude, longitude: currentCity!.longitude))
+        performSegue(withIdentifier: "lookAroundSegue", sender: nil)
     }
     
-    
-    @IBAction func cityBtnTapped(_ sender: UIButton) {
-        print("city button tapped")
+
+    @IBAction func optionBtnTapped(_ sender: UIButton){
+        if(viewedCities.count == Cities.count){
+            print("no more cities on the list. You have reached the end.")
+            return
+        }
+        //note, the force unwrap with ! may be risky
+        //should only be used if it is certain that the object is not nil
+        print(sender.titleLabel!.text!)
+        //I need to slice the string and remove the first 3 letters
+        // getting a substring in Swift is stupid
+        let text = sender.titleLabel!.text!
+        let startIndex = text.index(text.startIndex, offsetBy: 3)
+        let countryName = String(text[startIndex...])
+        print(countryName)
         
-        switch sender {
-        case sanFranciscoBtn:
-            fetchLookAroundScene(with: CLLocationCoordinate2D(latitude: 37.7749, longitude: -122.4194))
-        case newYorkCityBtn:
-            fetchLookAroundScene(with: CLLocationCoordinate2D(latitude: 40.7580, longitude: -73.9855))
-        case miamiBtn:
-            fetchLookAroundScene(with: CLLocationCoordinate2D(latitude: 25.7617, longitude: -80.1918))
-        default:
-            break
+        
+
+        if (currentCity!.country == countryName){
+            print("correct!")
+            
+            //increment the question number, change the label
+            currentQuestion = currentQuestion + 1
+            print(currentQuestion)
+            questionLabel.text = "\(currentQuestion). What country is this?"
+
+            //get a new random city
+            currentCity = Cities.randomElement()
+            
+            //if it's not in the "viewedCities" list, then add it
+            if(!viewedCities.contains(currentCity!)){
+                viewedCities.append(currentCity!)
+            }
+            //else, do while loop until current City is not in viewedCities, or until viewedCities contains all cities.
+            else{
+                while(viewedCities.contains(currentCity!) && viewedCities.count != Cities.count){
+                    currentCity = Cities.randomElement()
+                }
+                if(viewedCities.count == Cities.count){
+                    print("No more cities on the list!")
+                }
+                else{
+                    viewedCities.append(currentCity!)
+                }
+            }
+        } else {
+            print("wrong.")
         }
         
-        performSegue(withIdentifier: "lookAroundSegue", sender: nil)
     }
     
     // Function to fetch LookAround scene
@@ -137,7 +129,9 @@ class ViewController: UIViewController {
         }
     }
     override func viewDidLoad() {
-        print(miami.name, miami.country, miami.latitude, miami.longitude)
+        //print(miami.name, miami.country, miami.latitude, miami.longitude)
+        currentCity = Cities.randomElement()
+        viewedCities.append(currentCity!)
         super.viewDidLoad()
     }
 }

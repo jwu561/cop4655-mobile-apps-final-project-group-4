@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nVd-60-h8F">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EiM-mS-hx9">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -15,7 +15,7 @@
             <objects>
                 <viewController title="screen1" id="BYZ-38-t0r" customClass="ViewController" customModule="FInal_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PLH-Vx-bqu">
@@ -74,13 +74,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Screen1" id="P8x-VM-t6g">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="Two-Ht-LeX">
-                            <connections>
-                                <segue destination="nVd-60-h8F" kind="show" id="66e-0l-gpe"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Screen1" id="P8x-VM-t6g"/>
                     <connections>
                         <outlet property="buttonA" destination="PLH-Vx-bqu" id="8Hu-rW-Oea"/>
                         <outlet property="buttonB" destination="0Do-AR-tBn" id="s2m-Qt-JW3"/>
@@ -93,7 +87,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1954.9618320610687" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="1327" y="-280"/>
         </scene>
         <!--Look Around View Controller-->
         <scene sceneID="pil-jp-8Pp">
@@ -103,33 +97,14 @@
                 </lookAroundViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r7g-GD-i9I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1028" y="735"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="gRQ-3S-4Nv">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oCt-JW-mRs" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" id="vBo-Pm-Aqo"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Yfz-P1-kxY">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="dXh-Um-fuY" kind="relationship" relationship="rootViewController" id="Czm-Dl-CtD"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1bc-fb-3gB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="101.5267175572519" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="1326" y="421"/>
         </scene>
         <!--Game Mode-->
         <scene sceneID="IpD-92-0ia">
             <objects>
-                <viewController title="Game Mode" id="nVd-60-h8F" sceneMemberID="viewController">
+                <viewController title="Game Mode" id="nVd-60-h8F" customClass="MenuViewController" customModule="FInal_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KNd-8h-tfT">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GeoGenius Menu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yYK-CL-JIh">
@@ -184,7 +159,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Start Game"/>
                                 <connections>
-                                    <segue destination="oCt-JW-mRs" kind="show" id="Oag-r4-gRI"/>
+                                    <action selector="startGameTapped:" destination="nVd-60-h8F" eventType="touchUpInside" id="c3q-pS-Lgi"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" id="2wV-Xn-cAy">
@@ -224,30 +199,33 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <color key="tintColor" name="AccentColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="KKM-N0-bzR"/>
+                    <navigationItem key="navigationItem" title="Menu" id="KKM-N0-bzR"/>
+                    <connections>
+                        <outlet property="startGameBtn" destination="D3K-ig-MeP" id="reW-ks-sgc"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="quizScreen" id="AlD-58-eCN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GNv-7s-MEm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1005.3435114503816" y="-13.380281690140846"/>
+            <point key="canvasLocation" x="462" y="-280"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="Xec-ze-DZj">
+        <scene sceneID="hkN-4u-ekF">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dXh-Um-fuY" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="EiM-mS-hx9" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="ZlW-4j-3xU"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Pjo-xi-0rG">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0rI-bJ-7he">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="YUJ-ta-uha"/>
+                        <segue destination="nVd-60-h8F" kind="relationship" relationship="rootViewController" id="isy-I0-aPO"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="05Z-zc-Bis" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zjp-wq-WGj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1028.2442748091603" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="-396.18320610687022" y="-280.28169014084506"/>
         </scene>
     </scenes>
     <resources>

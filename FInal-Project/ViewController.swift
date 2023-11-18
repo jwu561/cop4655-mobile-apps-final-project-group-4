@@ -69,7 +69,7 @@ class ViewController: UIViewController {
         let text = sender.titleLabel!.text!
         let startIndex = text.index(text.startIndex, offsetBy: 3)
         let countryName = String(text[startIndex...])
-        print(countryName)
+        //print(countryName)
         
         
 
@@ -100,6 +100,10 @@ class ViewController: UIViewController {
                     viewedCities.append(currentCity!)
                 }
             }
+            
+            //randomize the choices
+            randomizedChoices()
+            
         } else {
             print("wrong.")
         }
@@ -128,10 +132,56 @@ class ViewController: UIViewController {
             }
         }
     }
+    //this function randomizes the multiple choices
+    func randomizedChoices(){
+        var indexes: [Int] = [1, 2, 3, 4]
+        //the array below is a copy of Cities
+        var cityOptions = Cities.map { $0.copy() as! City }
+        var usedCountries: [String] = []
+        //the while loop below essentially gets a random intex, a random City, and the text for the random City's country is assigned to the button of the corresponding index
+        while(!indexes.isEmpty)
+        {
+            let randomIndex = indexes.randomElement()!
+            let randIndexLoc = indexes.firstIndex(of: randomIndex)!
+            
+            var randCity = cityOptions.randomElement()
+            
+            //while loop below should prevent repeats in the country options
+            while(usedCountries.contains(randCity!.country)){
+                randCity = cityOptions.randomElement()
+            }
+            
+            //if both arrays are the same size, then this is the first iteration of the loop. At this point, the current City (correct answer) should be set as one of the choices
+            if(Cities.count == cityOptions.count){
+                randCity = currentCity
+            }
+            
+            let randCityLoc = cityOptions.firstIndex(of: randCity!)
+            
+            switch randomIndex {
+                case 1:
+                    buttonA.setTitle("A) \(randCity!.country)", for: .normal)
+                case 2:
+                    buttonB.setTitle("B) \(randCity!.country)", for: .normal)
+                case 3:
+                    buttonC.setTitle("C) \(randCity!.country)", for: .normal)
+                case 4:
+                    buttonD.setTitle("D) \(randCity!.country)", for: .normal)
+                default:
+                    print("something went wrong")
+            }
+            usedCountries.append(randCity!.country)
+            
+            //remove random index from indexes
+            let removed = indexes.remove(at: randIndexLoc)
+            let cityRemoved = cityOptions.remove(at: randCityLoc!)
+        }
+    }
     override func viewDidLoad() {
         //print(miami.name, miami.country, miami.latitude, miami.longitude)
         currentCity = Cities.randomElement()
         viewedCities.append(currentCity!)
+        randomizedChoices()
         super.viewDidLoad()
     }
 }

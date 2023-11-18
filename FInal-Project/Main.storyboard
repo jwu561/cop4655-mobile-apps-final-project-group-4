@@ -19,28 +19,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PLH-Vx-bqu">
-                                <rect key="frame" x="153" y="354" width="88" height="35"/>
+                                <rect key="frame" x="58" y="354" width="295" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="A) Spain"/>
+                                <buttonConfiguration key="configuration" style="plain" title="A) Spain" titleAlignment="center"/>
                                 <connections>
                                     <action selector="optionBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fS6-7x-xeA"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Do-AR-tBn">
-                                <rect key="frame" x="149" y="419" width="98" height="35"/>
+                                <rect key="frame" x="58" y="419" width="295" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="B) France"/>
+                                <buttonConfiguration key="configuration" style="plain" title="B) France" titleAlignment="center"/>
                                 <connections>
                                     <action selector="optionBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yf2-SV-UNR"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4dG-Wk-bg3">
-                                <rect key="frame" x="79" y="487" width="236" height="35"/>
+                                <rect key="frame" x="58" y="487" width="295" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="C) United States of America"/>
+                                <buttonConfiguration key="configuration" style="plain" title="C) United States of America" titleAlignment="center"/>
                                 <connections>
                                     <action selector="optionBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Th-Mt-F4N"/>
                                 </connections>
@@ -62,7 +62,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0iC-XQ-VBC">
-                                <rect key="frame" x="142" y="555" width="116" height="35"/>
+                                <rect key="frame" x="58" y="555" width="295" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="D) Germany" titleAlignment="center"/>
@@ -87,7 +87,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1327" y="-280"/>
+            <point key="canvasLocation" x="1325.9541984732823" y="-280.28169014084506"/>
         </scene>
         <!--Look Around View Controller-->
         <scene sceneID="pil-jp-8Pp">

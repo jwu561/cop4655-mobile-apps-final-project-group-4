@@ -23,9 +23,14 @@ class City: Equatable {
         self.name = name; self.latitude = latitude; self.longitude = longitude
         self.country = country
     }
+    
+    func copy() -> Any {
+        let copy = City(name: name, latitude: latitude, longitude: longitude, country: country)
+        return copy
+    }
 }
 
-var Cities = [miami, nyc, sanFran, barca, paris, berlin]
+var Cities = [miami, nyc, sanFran, barca, paris, berlin, tokyo, toronto, london]
 
 var miami = City(name: "Miami", latitude: 25.7617, longitude: -80.1918, country: "United States of America")
 var nyc = City(name: "New York City", latitude: 40.75780, longitude: -73.9855, country: "United States of America")
@@ -35,6 +40,12 @@ var sanFran = City(name: "San Francisco", latitude: 37.7749, longitude: -122.419
 var barca = City(name: "Barcelona", latitude: 41.3874, longitude: 2.1686, country: "Spain")
 var paris = City(name: "Paris", latitude: 48.8566, longitude: 2.3522, country: "France")
 var berlin = City(name: "Berlin", latitude: 52.5200, longitude: 13.4050, country: "Germany")
-var london = City(name: "London", latitude: 51.4980, longitude: 0.1436, country: "United Kingdom")
+//35.6764° N, 139.6500° E
+var tokyo = City(name: "Tokyo", latitude: 35.6800, longitude: 139.7693, country: "Japan")
+//43.6532° N, 79.3832° W
+var toronto = City(name: "Toronto", latitude: 43.6438, longitude: -79.3892, country: "Canada")
+
+var london = City(name: "London", latitude: 51.4980, longitude: -0.1436, country: "United Kingdom")
+
 
 

@@ -41,9 +41,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var buttonC: UIButton!
     @IBOutlet weak var buttonD: UIButton!
     
+    @IBOutlet weak var cityImageView: UIImageView!
     @IBOutlet weak var lookAround: UIButton!
     
-
+    
     
     @IBAction func lookAroundTapped(_ sender: Any) {
         if(viewedCities.count == Cities.count){
@@ -55,7 +56,7 @@ class ViewController: UIViewController {
         performSegue(withIdentifier: "lookAroundSegue", sender: nil)
     }
     
-
+    
     @IBAction func optionBtnTapped(_ sender: UIButton){
         if(viewedCities.count == Cities.count){
             print("no more cities on the list. You have reached the end.")
@@ -72,7 +73,7 @@ class ViewController: UIViewController {
         //print(countryName)
         
         
-
+        
         if (currentCity!.country == countryName){
             print("correct!")
             
@@ -80,7 +81,7 @@ class ViewController: UIViewController {
             currentQuestion = currentQuestion + 1
             print(currentQuestion)
             questionLabel.text = "\(currentQuestion). What country is this?"
-
+            
             //get a new random city
             currentCity = Cities.randomElement()
             
@@ -159,16 +160,16 @@ class ViewController: UIViewController {
             let randCityLoc = cityOptions.firstIndex(of: randCity!)
             
             switch randomIndex {
-                case 1:
-                    buttonA.setTitle("A) \(randCity!.country)", for: .normal)
-                case 2:
-                    buttonB.setTitle("B) \(randCity!.country)", for: .normal)
-                case 3:
-                    buttonC.setTitle("C) \(randCity!.country)", for: .normal)
-                case 4:
-                    buttonD.setTitle("D) \(randCity!.country)", for: .normal)
-                default:
-                    print("something went wrong")
+            case 1:
+                buttonA.setTitle("A) \(randCity!.country)", for: .normal)
+            case 2:
+                buttonB.setTitle("B) \(randCity!.country)", for: .normal)
+            case 3:
+                buttonC.setTitle("C) \(randCity!.country)", for: .normal)
+            case 4:
+                buttonD.setTitle("D) \(randCity!.country)", for: .normal)
+            default:
+                print("something went wrong")
             }
             usedCountries.append(randCity!.country)
             
@@ -183,10 +184,30 @@ class ViewController: UIViewController {
         viewedCities.append(currentCity!)
         randomizedChoices()
         super.viewDidLoad()
+        
+        
+        updateCityImage()
+        
+        
     }
+    
+    func updateCityImage() {
+        guard let imageUrlString = currentCity?.imageUrl,
+              let imageUrl = URL(string: imageUrlString) else {
+            print("Invalid image URL")
+            return
+        }
+        
+        
+        URLSession.shared.dataTask(with: imageUrl) { data, response, error in
+            guard let data = data, let image = UIImage(data: data) else { return }
+            DispatchQueue.main.async {
+                self.cityImageView.image = image
+            }
+        }.resume()
+    }
+    
 }
-
-
 // // previously this was right below func lookAroundTapped
 //    override func viewDidLoad() {
 //        super.viewDidLoad()

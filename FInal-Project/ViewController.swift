@@ -7,6 +7,7 @@
 
 import UIKit
 import MapKit
+import Swift
 
 var viewedCities: [City] = []
 // .isEmpty is an array property
@@ -45,10 +46,18 @@ class ViewController: UIViewController {
     @IBOutlet weak var lookAround: UIButton!
     
     
+    @IBOutlet weak var feedbackLabel: UILabel!
+    
+    
+    @IBOutlet weak var NomorecityLabel: UITextView!
+    
+    
     
     @IBAction func lookAroundTapped(_ sender: Any) {
         if(viewedCities.count == Cities.count){
             print("no more cities on the list. You have reached the end of the quiz.")
+            NomorecityLabel.text = "no more cities on the list. You have reached the end of the quiz."
+            feedbackLabel.text = ""
             return
         }
         print("viewed cities: ", viewedCities.count)
@@ -60,6 +69,8 @@ class ViewController: UIViewController {
     @IBAction func optionBtnTapped(_ sender: UIButton){
         if(viewedCities.count == Cities.count){
             print("no more cities on the list. You have reached the end.")
+            NomorecityLabel.text = "no more cities on the list. You have reached the end."
+            feedbackLabel.text = ""
             return
         }
         //note, the force unwrap with ! may be risky
@@ -76,6 +87,7 @@ class ViewController: UIViewController {
         
         if (currentCity!.country == countryName){
             print("correct!")
+            feedbackLabel.text = "Correct!"
             
             //increment the question number, change the label
             currentQuestion = currentQuestion + 1
@@ -106,7 +118,8 @@ class ViewController: UIViewController {
             randomizedChoices()
             
         } else {
-            print("wrong.")
+            print("Wrong.")
+            feedbackLabel.text = "Wrong."
         }
         
     }
@@ -187,8 +200,10 @@ class ViewController: UIViewController {
         
         
         updateCityImage()
+        feedbackLabel.text = ""
+        NomorecityLabel.text = ""
         
-        
+ 
     }
     
     func updateCityImage() {

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3F8C43B52B0854050057070C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8C43B42B0854050057070C /* LoginViewController.swift */; };
+		3F9F815A2B0BB8970011F970 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F9F81592B0BB8970011F970 /* Main.storyboard */; };
 		7F6926112AE8521500050E2F /* api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6926102AE8521500050E2F /* api.swift */; };
 		7FE3D1D02ACF1061006E9CF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE3D1CF2ACF1061006E9CF8 /* AppDelegate.swift */; };
 		7FE3D1D22ACF1061006E9CF8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE3D1D12ACF1061006E9CF8 /* SceneDelegate.swift */; };
@@ -18,7 +19,6 @@
 		7FE3D1F12ACF1064006E9CF8 /* FInal_ProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE3D1F02ACF1064006E9CF8 /* FInal_ProjectUITests.swift */; };
 		7FE3D1F32ACF1064006E9CF8 /* FInal_ProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE3D1F22ACF1064006E9CF8 /* FInal_ProjectUITestsLaunchTests.swift */; };
 		7FE3D2002ACF1090006E9CF8 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 7FE3D1FF2ACF1090006E9CF8 /* README.md */; };
-		7FE4BECF2AFF15D900A94406 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FE4BECE2AFF15D900A94406 /* Main.storyboard */; };
 		7FE4BED12B00804500A94406 /* Cities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE4BED02B00804500A94406 /* Cities.swift */; };
 		7FEE557D2B082B4400D9DAF0 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEE557C2B082B4400D9DAF0 /* MenuViewController.swift */; };
 /* End PBXBuildFile section */
@@ -42,6 +42,7 @@
 
 /* Begin PBXFileReference section */
 		3F8C43B42B0854050057070C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		3F9F81592B0BB8970011F970 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		7F6926102AE8521500050E2F /* api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = api.swift; sourceTree = "<group>"; };
 		7FE3D1CC2ACF1061006E9CF8 /* FInal-Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FInal-Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FE3D1CF2ACF1061006E9CF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -56,7 +57,6 @@
 		7FE3D1F02ACF1064006E9CF8 /* FInal_ProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FInal_ProjectUITests.swift; sourceTree = "<group>"; };
 		7FE3D1F22ACF1064006E9CF8 /* FInal_ProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FInal_ProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		7FE3D1FF2ACF1090006E9CF8 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		7FE4BECE2AFF15D900A94406 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		7FE4BED02B00804500A94406 /* Cities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cities.swift; sourceTree = "<group>"; };
 		7FEE557C2B082B4400D9DAF0 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -110,6 +110,7 @@
 		7FE3D1CE2ACF1061006E9CF8 /* FInal-Project */ = {
 			isa = PBXGroup;
 			children = (
+				3F9F81592B0BB8970011F970 /* Main.storyboard */,
 				7FE3D1CF2ACF1061006E9CF8 /* AppDelegate.swift */,
 				7FE4BED02B00804500A94406 /* Cities.swift */,
 				7FE3D1D12ACF1061006E9CF8 /* SceneDelegate.swift */,
@@ -117,7 +118,6 @@
 				7FEE557C2B082B4400D9DAF0 /* MenuViewController.swift */,
 				3F8C43B42B0854050057070C /* LoginViewController.swift */,
 				7F6926102AE8521500050E2F /* api.swift */,
-				7FE4BECE2AFF15D900A94406 /* Main.storyboard */,
 				7FE3D1D82ACF1064006E9CF8 /* Assets.xcassets */,
 				7FE3D1DA2ACF1064006E9CF8 /* LaunchScreen.storyboard */,
 				7FE3D1DD2ACF1064006E9CF8 /* Info.plist */,
@@ -249,7 +249,7 @@
 				7FE3D1DC2ACF1064006E9CF8 /* LaunchScreen.storyboard in Resources */,
 				7FE3D1D92ACF1064006E9CF8 /* Assets.xcassets in Resources */,
 				7FE3D2002ACF1090006E9CF8 /* README.md in Resources */,
-				7FE4BECF2AFF15D900A94406 /* Main.storyboard in Resources */,
+				3F9F815A2B0BB8970011F970 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,6 +10,8 @@ import Foundation
 
 class City: Equatable {
     //func below allows for comparison (==) between cities
+    var imageUrl: String
+    
     static func == (lhs: City, rhs: City) -> Bool {
         return lhs.name == rhs.name && lhs.latitude == rhs.latitude && lhs.longitude == rhs.longitude && lhs.country == rhs.country
     }
@@ -19,22 +21,34 @@ class City: Equatable {
     var longitude: Double
     var country: String
     
-    init(name: String, latitude: Double, longitude: Double, country: String){
-        self.name = name; self.latitude = latitude; self.longitude = longitude
+    init(name: String, latitude: Double, longitude: Double, country: String, imageUrl: String) {
+        self.name = name
+        self.latitude = latitude
+        self.longitude = longitude
         self.country = country
+        self.imageUrl = imageUrl
+    }
+    
+    func copy() -> Any {
+        let copy = City(name: name, latitude: latitude, longitude: longitude, country: country, imageUrl: imageUrl)
+        return copy
     }
 }
 
-var Cities = [miami, nyc, sanFran, barca, paris, berlin]
+var Cities = [miami, nyc, sanFran, barca, paris, berlin, tokyo, toronto, london]
 
-var miami = City(name: "Miami", latitude: 25.7617, longitude: -80.1918, country: "United States of America")
-var nyc = City(name: "New York City", latitude: 40.75780, longitude: -73.9855, country: "United States of America")
-var sanFran = City(name: "San Francisco", latitude: 37.7749, longitude: -122.4194, country: "United States of America")
+var miami = City(name: "Miami", latitude: 25.7617, longitude: -80.1918, country: "United States of America", imageUrl: "https://example.com/path/to/miami.jpg")
+var nyc = City(name: "New York City", latitude: 40.75780, longitude: -73.9855, country: "United States of America", imageUrl: "https://example.com/path/to/nyc.jpg")
+var sanFran = City(name: "San Francisco", latitude: 37.7749, longitude: -122.4194, country: "United States of America", imageUrl: "Path to image")
 //51.5007° N, 0.1246° W
 //51.5045° N, 0.0865° W
-var barca = City(name: "Barcelona", latitude: 41.3874, longitude: 2.1686, country: "Spain")
-var paris = City(name: "Paris", latitude: 48.8566, longitude: 2.3522, country: "France")
-var berlin = City(name: "Berlin", latitude: 52.5200, longitude: 13.4050, country: "Germany")
-var london = City(name: "London", latitude: 51.4980, longitude: 0.1436, country: "United Kingdom")
+var barca = City(name: "Barcelona", latitude: 41.3874, longitude: 2.1686, country: "Spain", imageUrl: "Path to image")
+var paris = City(name: "Paris", latitude: 48.8566, longitude: 2.3522, country: "France", imageUrl: "Path to image")
+var berlin = City(name: "Berlin", latitude: 52.5200, longitude: 13.4050, country: "Germany", imageUrl: "Path to image")
+//35.6764° N, 139.6500° E
+var tokyo = City(name: "Tokyo", latitude: 35.6800, longitude: 139.7693, country: "Japan", imageUrl: "Path to image")
+//43.6532° N, 79.3832° W
+var toronto = City(name: "Toronto", latitude: 43.6438, longitude: -79.3892, country: "Canada", imageUrl: "Path to image")
 
+var london = City(name: "London", latitude: 51.4980, longitude: -0.1436, country: "United Kingdom", imageUrl: "Path to image")
 

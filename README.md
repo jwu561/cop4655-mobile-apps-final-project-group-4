@@ -149,14 +149,14 @@ User Stories
 - [X] Milestone 2 Activity 4: Add Issues as cards to the Project Board
 - [X] Milestone 2 Activity 5: Begin Developing!
 - [X] Milestone 3 Activity 1: Update Project Board, Sprint Plans, and Github Repo
-- [ ] Create Standard Game View Navigator
+- [X] Create Standard Game View Navigator
 - [ ] Milestone 3 Activity 2: Required feature: implement LookAround (streetview) for 3 cities
 - [ ] Milestone 3 Activity 3: Required Feature: Create a new screen (UIView) with the layout for a question
 - [ ] Required Feature: Add a 'random city' API call
-- [ ] Create Game Mode navigator
-- [ ] Create Login Navigator
-- [ ] Create "Create Account" navigator
-- [ ] Create Scores navigator
+- [X] Create Game Mode navigator
+- [X] Create Login Navigator
+- [X] Create "Create Account" navigator
+- [X] Create Scores navigator
 - [ ] Implement Tab Bar Controller
 - [ ] Create No Hints Game navigator
 - [ ] Create One Change Game navigator

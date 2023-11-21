@@ -21,7 +21,7 @@ class City: Equatable {
     var longitude: Double
     var country: String
     
-    init(name: String, latitude: Double, longitude: Double, country: String, imageUrl: String) {
+    init(name: String, latitude: Double, longitude: Double, country: String, imageUrl: String = "Path to image") {
         self.name = name
         self.latitude = latitude
         self.longitude = longitude
@@ -35,7 +35,7 @@ class City: Equatable {
     }
 }
 
-var Cities = [miami, nyc, sanFran, barca, paris, berlin, tokyo, toronto, london]
+var Cities = [miami, nyc, sanFran, barca, paris, berlin, tokyo, toronto, london, taipei, singapore, athens, sydney]
 
 var miami = City(name: "Miami", latitude: 25.7617, longitude: -80.1918, country: "United States of America", imageUrl: "https://example.com/path/to/miami.jpg")
 var nyc = City(name: "New York City", latitude: 40.75780, longitude: -73.9855, country: "United States of America", imageUrl: "https://example.com/path/to/nyc.jpg")
@@ -51,4 +51,13 @@ var tokyo = City(name: "Tokyo", latitude: 35.6800, longitude: 139.7693, country:
 var toronto = City(name: "Toronto", latitude: 43.6438, longitude: -79.3892, country: "Canada", imageUrl: "Path to image")
 
 var london = City(name: "London", latitude: 51.4980, longitude: -0.1436, country: "United Kingdom", imageUrl: "Path to image")
+
+
+//cdmx doesn't work, don't know why. It should be supported
+var cdmx = City(name: "Mexico City", latitude: 19.4354, longitude: -99.1502, country: "Mexico")
+var sydney = City(name: "Sydney", latitude: -33.8688, longitude: 151.2093, country: "Australia")
+var singapore = City(name: "Singapore", latitude: 1.2792, longitude: 103.8527, country: "Singapore")
+var athens = City(name: "Athens", latitude: 37.9839, longitude: 23.7275, country: "Greece")
+var taipei = City(name: "Taipei", latitude: 25.0330, longitude: 121.5654, country: "Taiwan")
+
 

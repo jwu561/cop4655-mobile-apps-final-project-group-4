@@ -158,14 +158,19 @@ User Stories
 - [X] Milestone 3 Activity 3: Required Feature: Create a new screen (UIView) with the layout for a question
 - [ ] Required Feature: Add a 'random city' API call
 - [X] Create Game Mode navigator
-- [X] Create Login Navigator
-- [X] Create "Create Account" navigator
+- [ ] Create Login Navigator
+- [ ] Allow continue as guest option
+- [ ] Segueway to Scores screen when game is done
+- [ ] Get rid of popup screens
+- [ ] Add scores logic
+- [ ] Add login logic
+- [ ] Create "Create Account" navigator
 - [X] Create Scores navigator
 - [ ] Implement Tab Bar Controller
 - [ ] Create No Hints Game navigator
 - [ ] Create One Change Game navigator
 - [ ] Implement Backend
+- [ ] Add mini photo of city to first screen when starting the game
 - [X] Milestone 3 Activity 4: Demo Day Prep
 - [ ] Milestone 4 Activity 1: Submit App
-      
 

@@ -17,6 +17,10 @@ Jonathan Wu
 4. [Schema](#Schema)
 
 ## Overview
+Demo video:
+[![GeoGenius Demo](https://img.youtube.com/vi/PYKoiFgEv18/0.jpg)](https://www.youtube.com/watch?v=PYKoiFgEv18)
+
+https://www.youtube.com/watch?v=PYKoiFgEv18
 
 ### Description
 

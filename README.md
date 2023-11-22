@@ -129,7 +129,8 @@ This will be a challenge as we will be creating this by scratch. This product is
 
 ### Unit 9 Build Progress
 
-![test](https://github.com/cop4655-mobile-apps-final-project-group-4/geoguesser_proto_demo.gif)
+![test]([https://github.com/cop4655-mobile-apps-final-project-group-4/geoguesser_proto_demo.gif](https://github.com/COP4655-MobileApps-Fall2023/cop4655-mobile-apps-final-project-group-4/blob/main/geoguesser_proto_demo.gif))
+
 
 ## Schema 
 

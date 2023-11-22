@@ -154,8 +154,8 @@ User Stories
 - [X] Milestone 2 Activity 5: Begin Developing!
 - [X] Milestone 3 Activity 1: Update Project Board, Sprint Plans, and Github Repo
 - [X] Create Standard Game View Navigator
-- [ ] Milestone 3 Activity 2: Required feature: implement LookAround (streetview) for 3 cities
-- [ ] Milestone 3 Activity 3: Required Feature: Create a new screen (UIView) with the layout for a question
+- [X] Milestone 3 Activity 2: Required feature: implement LookAround (streetview) for 3 cities
+- [X] Milestone 3 Activity 3: Required Feature: Create a new screen (UIView) with the layout for a question
 - [ ] Required Feature: Add a 'random city' API call
 - [X] Create Game Mode navigator
 - [X] Create Login Navigator
@@ -165,7 +165,7 @@ User Stories
 - [ ] Create No Hints Game navigator
 - [ ] Create One Change Game navigator
 - [ ] Implement Backend
-- [ ] Milestone 3 Activity 4: Demo Day Prep
+- [X] Milestone 3 Activity 4: Demo Day Prep
 - [ ] Milestone 4 Activity 1: Submit App
       
 

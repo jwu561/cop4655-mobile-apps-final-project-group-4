@@ -128,8 +128,8 @@ This will be a challenge as we will be creating this by scratch. This product is
 ![Beginning Product](https://github.com/COP4655-MobileApps-Fall2023/cop4655-mobile-apps-final-project-group-4/assets/124208345/6e338ed3-60c4-4da2-8eed-d822ff1943d1)
 
 ### Unit 9 Build Progress
-geoguesser proto demo.gif
-![](https://github.com/cop4655-mobile-apps-final-project-group-4/geoguesser_proto_demo.gif)
+
+![test](https://github.com/cop4655-mobile-apps-final-project-group-4/geoguesser_proto_demo.gif)
 
 ## Schema 
 

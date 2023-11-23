@@ -67,7 +67,6 @@ class ViewController: UIViewController {
             print("no more cities on the list. You have reached the end of the quiz.")
             NomorecityLabel.text = "no more cities on the list. You have reached the end of the quiz."
             feedbackLabel.text = ""
-            performSegue(withIdentifier: "quizToScores", sender: nil)
             return
         }
         print("viewed cities: ", viewedCities.count)
@@ -81,6 +80,7 @@ class ViewController: UIViewController {
             print("no more cities on the list. You have reached the end.")
             NomorecityLabel.text = "no more cities on the list. You have reached the end."
             feedbackLabel.text = ""
+            performSegue(withIdentifier: "quizToScores", sender: nil)
             return
         }
         //note, the force unwrap with ! may be risky
@@ -124,6 +124,7 @@ class ViewController: UIViewController {
                     viewedCities.append(currentCity!)
                 }
             }
+            print("answer: ",currentCity?.country)
             
             //randomize the choices
             randomizedChoices()

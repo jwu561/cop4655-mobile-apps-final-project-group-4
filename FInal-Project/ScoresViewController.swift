@@ -1,26 +1,19 @@
 //
-//  MenuViewController.swift
+//  ScoresViewController.swift
 //  FInal-Project
 //
-//  Created by Kevin Infante on 11/17/23.
+//  Created by Kevin Infante on 11/21/23.
 //
 
 import UIKit
 
-class MenuViewController: UIViewController {
+class ScoresViewController: UIViewController {
+
+    @IBOutlet weak var menuButton: UIButton!
     
-    @IBOutlet weak var startGameBtn: UIButton!
-    
-    
-    @IBAction func startGameTapped(_ sender: Any) {
-        performSegue(withIdentifier: "quizScreen", sender: nil)
+    @IBAction func menuBtnTapped(_ sender: Any) {
+        performSegue(withIdentifier: "toMenu", sender: nil)
     }
-    
-    @IBAction func toScores(_ sender: Any) {
-        performSegue(withIdentifier: "toScores", sender: nil)
-    }
-    @IBOutlet weak var scoresBtn: UIButton!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 

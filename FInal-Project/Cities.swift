@@ -35,7 +35,7 @@ class City: Equatable {
     }
 }
 
-var Cities = [miami, nyc, sanFran, barca, paris, berlin, tokyo, toronto, london, taipei, singapore, athens, sydney]
+var Cities = [miami, nyc, sanFran, barca, paris, berlin, tokyo, toronto, london, taipei, singapore, athens, sydney, vienna, montreal, athens, cpnhgn]
 
 var miami = City(name: "Miami", latitude: 25.7617, longitude: -80.1918, country: "United States of America", imageUrl: "https://example.com/path/to/miami.jpg")
 var nyc = City(name: "New York City", latitude: 40.75780, longitude: -73.9855, country: "United States of America", imageUrl: "https://example.com/path/to/nyc.jpg")
@@ -59,5 +59,9 @@ var sydney = City(name: "Sydney", latitude: -33.8688, longitude: 151.2093, count
 var singapore = City(name: "Singapore", latitude: 1.2792, longitude: 103.8527, country: "Singapore")
 var athens = City(name: "Athens", latitude: 37.9839, longitude: 23.7275, country: "Greece")
 var taipei = City(name: "Taipei", latitude: 25.0330, longitude: 121.5654, country: "Taiwan")
+
+var montreal = City(name: "Montreal", latitude: 45.5019, longitude: -73.5674, country: "Canada")
+var vienna = City(name: "Vienna", latitude: 48.2082, longitude: 16.3719, country: "Austria")
+var cpnhgn = City(name: "Copenhagen", latitude: 55.6761, longitude: 12.5683, country: "Denmark")
 
 

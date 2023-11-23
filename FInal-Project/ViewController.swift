@@ -23,6 +23,9 @@ var viewedCities: [City] = []
 var currentCity: City?
 var currentQuestion = 1
 
+var correctAnswers = 0
+var wrongAnswers = 0
+
 class ViewController: UIViewController {
     
     private var lookAroundViewController: MKLookAroundViewController?
@@ -31,6 +34,12 @@ class ViewController: UIViewController {
         if segue.identifier == "lookAroundSegue" {
             if let lookAroundViewController = segue.destination as? MKLookAroundViewController {
                 self.lookAroundViewController = lookAroundViewController
+            }
+        }
+        if segue.identifier == "quizToScores" {
+            if let scoresVC = segue.destination as? ScoresViewController {
+                scoresVC.correctAnswers = correctAnswers
+                scoresVC.wrongAnswers = wrongAnswers
             }
         }
     }
@@ -58,6 +67,7 @@ class ViewController: UIViewController {
             print("no more cities on the list. You have reached the end of the quiz.")
             NomorecityLabel.text = "no more cities on the list. You have reached the end of the quiz."
             feedbackLabel.text = ""
+            performSegue(withIdentifier: "quizToScores", sender: nil)
             return
         }
         print("viewed cities: ", viewedCities.count)
@@ -87,6 +97,7 @@ class ViewController: UIViewController {
         
         if (currentCity!.country == countryName){
             print("correct!")
+            correctAnswers = correctAnswers + 1
             feedbackLabel.text = "Correct!"
             
             //increment the question number, change the label
@@ -119,6 +130,7 @@ class ViewController: UIViewController {
             
         } else {
             print("Wrong.")
+            wrongAnswers = wrongAnswers + 1
             feedbackLabel.text = "Wrong."
         }
         
@@ -192,7 +204,7 @@ class ViewController: UIViewController {
         }
     }
     override func viewDidLoad() {
-        //print(miami.name, miami.country, miami.latitude, miami.longitude)
+        //reset global variables and refresh other things
         currentCity = Cities.randomElement()
         viewedCities.append(currentCity!)
         randomizedChoices()
@@ -202,8 +214,6 @@ class ViewController: UIViewController {
         updateCityImage()
         feedbackLabel.text = ""
         NomorecityLabel.text = ""
-        
- 
     }
     
     func updateCityImage() {

@@ -17,6 +17,10 @@ Jonathan Wu
 4. [Schema](#Schema)
 
 ## Overview
+Demo video:
+[![GeoGenius Demo](https://img.youtube.com/vi/PYKoiFgEv18/0.jpg)](https://www.youtube.com/watch?v=PYKoiFgEv18)
+
+https://www.youtube.com/watch?v=PYKoiFgEv18
 
 ### Description
 
@@ -123,7 +127,9 @@ This will be a challenge as we will be creating this by scratch. This product is
 ### Current Product
 ![Beginning Product](https://github.com/COP4655-MobileApps-Fall2023/cop4655-mobile-apps-final-project-group-4/assets/124208345/6e338ed3-60c4-4da2-8eed-d822ff1943d1)
 
+### Unit 9 Build Progress
 
+![test](https://github.com/COP4655-MobileApps-Fall2023/cop4655-mobile-apps-final-project-group-4/blob/main/geoguesser_proto_demo.gif)
 
 ## Schema 
 
@@ -149,19 +155,24 @@ User Stories
 - [X] Milestone 2 Activity 4: Add Issues as cards to the Project Board
 - [X] Milestone 2 Activity 5: Begin Developing!
 - [X] Milestone 3 Activity 1: Update Project Board, Sprint Plans, and Github Repo
-- [ ] Create Standard Game View Navigator
-- [ ] Milestone 3 Activity 2: Required feature: implement LookAround (streetview) for 3 cities
-- [ ] Milestone 3 Activity 3: Required Feature: Create a new screen (UIView) with the layout for a question
+- [X] Create Standard Game View Navigator
+- [X] Milestone 3 Activity 2: Required feature: implement LookAround (streetview) for 3 cities
+- [X] Milestone 3 Activity 3: Required Feature: Create a new screen (UIView) with the layout for a question
 - [ ] Required Feature: Add a 'random city' API call
-- [ ] Create Game Mode navigator
+- [X] Create Game Mode navigator
 - [ ] Create Login Navigator
+- [ ] Allow continue as guest option
+- [ ] Segueway to Scores screen when game is done
+- [ ] Get rid of popup screens
+- [ ] Add scores logic
+- [ ] Add login logic
 - [ ] Create "Create Account" navigator
-- [ ] Create Scores navigator
+- [X] Create Scores navigator
 - [ ] Implement Tab Bar Controller
 - [ ] Create No Hints Game navigator
 - [ ] Create One Change Game navigator
 - [ ] Implement Backend
-- [ ] Milestone 3 Activity 4: Demo Day Prep
+- [ ] Add mini photo of city to first screen when starting the game
+- [X] Milestone 3 Activity 4: Demo Day Prep
 - [ ] Milestone 4 Activity 1: Submit App
-      
 

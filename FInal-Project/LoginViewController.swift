@@ -17,6 +17,13 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var passwordField: UITextField!
     
+    
+    
+    @IBOutlet weak var GuestBtn: UIButton!
+    
+   // @IBAction func startGameTapped(_ sender: Any) {
+    //    performSegue(withIdentifier: "LoginScreen", sender: nil)
+   // }
 
     override func viewDidLoad() {
         super.viewDidLoad()

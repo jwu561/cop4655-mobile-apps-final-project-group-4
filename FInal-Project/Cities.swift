@@ -35,7 +35,7 @@ class City: Equatable {
     }
 }
 
-var Cities = [miami, nyc, sanFran, barca, paris, berlin, tokyo, toronto, london, taipei, singapore, athens, sydney, vienna, montreal, cpnhgn]
+var Cities = [miami, nyc, sanFran, barca, paris, berlin, tokyo, toronto, london, taipei, singapore, athens, sydney, vienna, montreal, cpnhgn, osaka, dublin, tampa, prague, cologne, jerusalem]
 
 var miami = City(name: "Miami", latitude: 25.7617, longitude: -80.1918, country: "United States of America", imageUrl: "https://example.com/path/to/miami.jpg")
 var nyc = City(name: "New York City", latitude: 40.75780, longitude: -73.9855, country: "United States of America", imageUrl: "https://example.com/path/to/nyc.jpg")
@@ -65,3 +65,11 @@ var vienna = City(name: "Vienna", latitude: 48.2082, longitude: 16.3719, country
 var cpnhgn = City(name: "Copenhagen", latitude: 55.6761, longitude: 12.5683, country: "Denmark")
 
 
+//var Cities = [osaka, dublin, tampa, prague, cologne, jerusalem]
+
+var osaka = City(name: "Osaka", latitude: 34.672314, longitude: 135.484802, country: "Japan")
+var dublin = City(name: "Dublin", latitude: 53.9897, longitude: 7.3633, country: "Ireland")
+var tampa = City(name: "Tampa", latitude: 27.964157, longitude: -82.452606, country: "United States Of America")
+var prague = City(name: "Prague", latitude: 50.0755, longitude: 14.4378, country: "Czech Republic")
+var cologne = City(name: "Cologne", latitude: 50.9375, longitude: 6.9603, country: "Germany")
+var jerusalem = City(name: "Jerusalem", latitude: 31.7683, longitude: 35.2137, country: "Isreal")

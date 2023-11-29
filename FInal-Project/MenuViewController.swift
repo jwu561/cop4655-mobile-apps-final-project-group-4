@@ -9,21 +9,42 @@ import UIKit
 
 class MenuViewController: UIViewController {
     
+    var hardMode = false
     
-    
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "quizScreen" {
+            if let senderButton = sender as? UIButton {
+                if senderButton == startGameBtn {
+                    // The segue was triggered by the startGameBtn
+                    hardMode = false
+                } else if senderButton == hardModebtn {
+                    // The segue was triggered by the hardModeBtn
+                    hardMode = true
+                }
+                
+                // Set the hardMode property in the destination view controller
+                if let quizView = segue.destination as? ViewController {
+                    quizView.hardMode = hardMode
+                }
+            }
+        }
+    }
     
     @IBOutlet weak var startGameBtn: UIButton!
+    @IBOutlet weak var hardModebtn: UIButton!
+    @IBOutlet weak var scoresBtn: UIButton!
     
+    @IBAction func startGameTapped(_ sender: UIButton) {
+        performSegue(withIdentifier: "quizScreen", sender: sender)
+    }
     
-    @IBAction func startGameTapped(_ sender: Any) {
-        performSegue(withIdentifier: "quizScreen", sender: nil)
+    @IBAction func hardModeTapped(_ sender: UIButton) {
+        performSegue(withIdentifier: "quizScreen", sender: sender)
     }
     
     @IBAction func toScores(_ sender: Any) {
         performSegue(withIdentifier: "toScores", sender: nil)
     }
-    @IBOutlet weak var scoresBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()

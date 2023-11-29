@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VzL-H3-mn0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VzL-H3-mn0">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Look around view controllers" minToolsVersion="14.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -344,12 +343,15 @@
                                         <rect key="frame" x="-11" y="-21" width="154" height="198"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LCj-rM-ktj">
-                                        <rect key="frame" x="-11" y="158" width="154" height="34"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p1C-Zm-B5S">
+                                        <rect key="frame" x="12" y="175" width="109" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Hard Mode"/>
+                                        <connections>
+                                            <action selector="hardModeTapped:" destination="nVd-60-h8F" eventType="touchUpInside" id="sHW-rZ-4Kc"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </view>
                             <view contentMode="scaleToFill" id="cyc-TW-1yS">
@@ -375,6 +377,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Menu" id="KKM-N0-bzR"/>
                     <connections>
+                        <outlet property="hardModebtn" destination="p1C-Zm-B5S" id="7hQ-5U-6tb"/>
                         <outlet property="startGameBtn" destination="D3K-ig-MeP" id="reW-ks-sgc"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="quizScreen" id="AlD-58-eCN"/>
                         <segue destination="JTU-Cb-mpA" kind="show" identifier="toScores" id="1G1-Bq-8Mw"/>
@@ -605,7 +608,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="0Vl-p4-Gia"/>
-        <segue reference="rrl-P6-pPd"/>
+        <segue reference="1G1-Bq-8Mw"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="brain.head.profile" catalog="system" width="120" height="128"/>

@@ -27,6 +27,7 @@ var correctAnswers = 0
 var wrongAnswers = 0
 
 class ViewController: UIViewController {
+    var hardMode: Bool?
     
     private var lookAroundViewController: MKLookAroundViewController?
     
@@ -76,7 +77,8 @@ class ViewController: UIViewController {
     
     
     @IBAction func optionBtnTapped(_ sender: UIButton){
-        if(viewedCities.count == Cities.count){
+        if(viewedCities.count == Cities.count ||
+           (hardMode == false && viewedCities.count > 9)){
             print("no more cities on the list. You have reached the end.")
             NomorecityLabel.text = "no more cities on the list. You have reached the end."
             feedbackLabel.text = ""
@@ -215,6 +217,10 @@ class ViewController: UIViewController {
         updateCityImage()
         feedbackLabel.text = ""
         NomorecityLabel.text = ""
+        
+        if let mode = hardMode {
+            print("HARD MODE IS: ", mode)
+        }
     }
     
     func updateCityImage() {

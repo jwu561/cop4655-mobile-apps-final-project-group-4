@@ -35,7 +35,7 @@ class City: Equatable {
     }
 }
 
-//var Cities = [miami, nyc, sanFran, barca, paris, berlin, tokyo, toronto, london, taipei, singapore, athens, sydney, vienna, montreal, cpnhgn, osaka, tampa, prague, cologne, jerusalem, rome, brussels, venice, kristiansand, stockholm, bruges, hiroshima, lyon, helsinki, ottowa, christchurch, jurong, fiorentino, budapest, odense, geneva, vaduz, balzers, gibraltar, warsaw, lublin]
+var Cities = [miami, nyc, sanFran, barca, paris, berlin, tokyo, toronto, london, taipei, singapore, athens, sydney, vienna, montreal, cpnhgn, osaka, tampa, prague, cologne, jerusalem, rome, brussels, venice, kristiansand, stockholm, bruges, hiroshima, lyon, helsinki, ottowa, christchurch, jurong, fiorentino, budapest, odense, geneva, vaduz, balzers, gibraltar, warsaw, lublin]
 
 var miami = City(name: "Miami", latitude: 25.7617, longitude: -80.1918, country: "United States of America", imageUrl: "https://example.com/path/to/miami.jpg")
 var nyc = City(name: "New York City", latitude: 40.75780, longitude: -73.9855, country: "United States of America", imageUrl: "https://example.com/path/to/nyc.jpg")
@@ -100,3 +100,45 @@ var balzers = City(name: "balzers", latitude: 47.0656 , longitude:  9.5075, coun
 var gibraltar = City(name: "Gibraltar", latitude: 36.1408 , longitude:  -5.3536, country: "United Kingdom")
 var warsaw = City(name: "Warsaw", latitude: 52.2297 , longitude:  21.0122, country: "Poland")
 var lublin = City(name: "Lublin", latitude: 51.2465 , longitude:  22.5684, country: "Poland")
+
+func nameToCountryCode(_ countryName: String) -> String {
+    switch countryName {
+    case "United States of America":
+        return "US"
+    case "Spain":
+        return "ES"
+    case "France":
+        return "FR"
+    case "Germany":
+        return "DE"
+    case "Japan":
+        return "JP"
+    case "Canada":
+        return "CA"
+    case "United Kingdom":
+        return "GB"
+    case "Mexico":
+        return "MX"
+    case "Australia":
+        return "AU"
+    case "Singapore":
+        return "SG"
+    case "Greece":
+        return "GR"
+    case "Taiwan":
+        return "TW"
+    case "Austria":
+        return "AT"
+    case "Denmark":
+        return "DK"
+    case "Ireland":
+        return "IE"
+    case "Czech Republic":
+        return "CZ"
+    case "Israel":
+        return "IL"
+    default:
+        // Handle cases for other countries if needed
+        return "Unknown"
+    }
+}

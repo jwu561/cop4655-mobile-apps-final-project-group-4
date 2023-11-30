@@ -92,8 +92,8 @@ var budapest = City(name: "Budapest", latitude: 47.4979 , longitude:  19.0402, c
 var odense = City(name: "Odense", latitude: 55.4038 , longitude:  10.4024, country: "Denmark")
 
 var geneva = City(name: "Geneva", latitude: 46.2044, longitude:  6.1432, country: "Switzerland")
-var vaduz = City(name: "vaduz", latitude: 47.1410 , longitude:  9.5209, country: "Liechtenstein")
-var balzers = City(name: "balzers", latitude: 47.0656 , longitude:  9.5075, country: "Liechtenstein")
+var vaduz = City(name: "Vaduz", latitude: 47.1410 , longitude:  9.5209, country: "Liechtenstein")
+var balzers = City(name: "Balzers", latitude: 47.0656 , longitude:  9.5075, country: "Liechtenstein")
 var gibraltar = City(name: "Gibraltar", latitude: 36.1408 , longitude:  -5.3536, country: "United Kingdom")
 var warsaw = City(name: "Warsaw", latitude: 52.2297 , longitude:  21.0122, country: "Poland")
 var lublin = City(name: "Lublin", latitude: 51.2465 , longitude:  22.5684, country: "Poland")

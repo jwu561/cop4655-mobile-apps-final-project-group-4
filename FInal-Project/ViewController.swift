@@ -61,6 +61,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var NomorecityLabel: UITextView!
     
+    @IBOutlet weak var hintBtn: UIButton!
     
     
     @IBAction func lookAroundTapped(_ sender: Any) {
@@ -206,6 +207,14 @@ class ViewController: UIViewController {
             let cityRemoved = cityOptions.remove(at: randCityLoc!)
         }
     }
+    
+    
+    @IBAction func hintBtnTapped(_ sender: Any) {
+        print("hint button tapped")
+        let cc = nameToCountryCode(currentCity!.country)
+        print(cc)
+    }
+    
     override func viewDidLoad() {
         //reset global variables and refresh other things
         currentCity = Cities.randomElement()
@@ -220,6 +229,9 @@ class ViewController: UIViewController {
         
         if let mode = hardMode {
             print("HARD MODE IS: ", mode)
+            if hardMode == true{
+                hintBtn.isHidden = true
+            }
         }
     }
     

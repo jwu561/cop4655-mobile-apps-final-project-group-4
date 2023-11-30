@@ -73,3 +73,45 @@ var tampa = City(name: "Tampa", latitude: 27.964157, longitude: -82.452606, coun
 var prague = City(name: "Prague", latitude: 50.0755, longitude: 14.4378, country: "Czech Republic")
 var cologne = City(name: "Cologne", latitude: 50.9375, longitude: 6.9603, country: "Germany")
 var jerusalem = City(name: "Jerusalem", latitude: 31.7683, longitude: 35.2137, country: "Israel")
+
+func nameToCountryCode(_ countryName: String) -> String {
+    switch countryName {
+    case "United States of America":
+        return "US"
+    case "Spain":
+        return "ES"
+    case "France":
+        return "FR"
+    case "Germany":
+        return "DE"
+    case "Japan":
+        return "JP"
+    case "Canada":
+        return "CA"
+    case "United Kingdom":
+        return "GB"
+    case "Mexico":
+        return "MX"
+    case "Australia":
+        return "AU"
+    case "Singapore":
+        return "SG"
+    case "Greece":
+        return "GR"
+    case "Taiwan":
+        return "TW"
+    case "Austria":
+        return "AT"
+    case "Denmark":
+        return "DK"
+    case "Ireland":
+        return "IE"
+    case "Czech Republic":
+        return "CZ"
+    case "Israel":
+        return "IL"
+    default:
+        // Handle cases for other countries if needed
+        return "Unknown"
+    }
+}

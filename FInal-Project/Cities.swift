@@ -155,6 +155,8 @@ func nameToCountryCode(_ countryName: String) -> String {
         return "HU"
     case "New Zealand":
         return "NZ"
+    case "Switzerland":
+        return "CH"
     default:
         // Handle cases for other countries if needed
         return "Unknown"

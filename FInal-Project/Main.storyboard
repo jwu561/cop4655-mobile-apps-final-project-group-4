@@ -108,8 +108,8 @@
                                     <action selector="hintBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5hB-gh-IGt"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="1. What Country is this?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zg4-Ch-YTv">
-                                <rect key="frame" x="103" y="85" width="179" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1. What Country is this?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zg4-Ch-YTv">
+                                <rect key="frame" x="107" y="74" width="179" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="LqK-25-y3S"/>
                                     <constraint firstAttribute="width" constant="179" id="ho5-NL-S5y"/>
@@ -118,10 +118,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XKn-94-aim">
-                                <rect key="frame" x="76" y="131" width="240" height="160"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XKn-94-aim">
+                                <rect key="frame" x="76" y="105" width="240" height="160"/>
                                 <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="rYb-it-JN6"/>
+                                    <constraint firstAttribute="height" constant="160" id="zPB-TX-t6j"/>
+                                </constraints>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                     <wkPreferences key="preferences"/>
@@ -135,7 +138,11 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0iC-XQ-VBC" secondAttribute="trailing" constant="48" id="47r-4p-2hb"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="u3N-oW-3fh" secondAttribute="trailing" constant="106" id="5vM-GE-DAP"/>
                             <constraint firstItem="kzF-7c-ud8" firstAttribute="top" secondItem="0iC-XQ-VBC" secondAttribute="bottom" constant="7.6666666666666288" id="5yY-tI-EC4"/>
+                            <constraint firstItem="XKn-94-aim" firstAttribute="top" secondItem="Zg4-Ch-YTv" secondAttribute="bottom" constant="10" id="80b-ps-Avx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XKn-94-aim" secondAttribute="trailing" constant="77" id="AFU-TY-O9Y"/>
                             <constraint firstItem="KpZ-jU-3ar" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="350" id="CUj-jY-RI0"/>
+                            <constraint firstItem="Zg4-Ch-YTv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="107" id="DqV-un-U92"/>
+                            <constraint firstItem="Zg4-Ch-YTv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="FWm-AV-gXd"/>
                             <constraint firstItem="PLH-Vx-bqu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="KFi-Yj-1o4"/>
                             <constraint firstItem="u3N-oW-3fh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="103" id="KiH-ng-RMw"/>
                             <constraint firstItem="0iC-XQ-VBC" firstAttribute="top" secondItem="4dG-Wk-bg3" secondAttribute="bottom" constant="33" id="OFs-UN-e2L"/>
@@ -147,11 +154,11 @@
                             <constraint firstItem="4dG-Wk-bg3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="cOP-7w-04p"/>
                             <constraint firstItem="0Do-AR-tBn" firstAttribute="top" secondItem="PLH-Vx-bqu" secondAttribute="bottom" constant="30" id="eDK-xb-CV4"/>
                             <constraint firstItem="kzF-7c-ud8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="92" id="eLE-H3-b0x"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Zg4-Ch-YTv" secondAttribute="trailing" constant="106" id="f2S-rP-92a"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kzF-7c-ud8" secondAttribute="trailing" constant="91" id="lyw-fu-OBL"/>
+                            <constraint firstItem="XKn-94-aim" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="76" id="noP-Hl-ffg"/>
                             <constraint firstItem="PLH-Vx-bqu" firstAttribute="top" secondItem="u3N-oW-3fh" secondAttribute="bottom" constant="71" id="vaF-YM-2OM"/>
                             <constraint firstItem="KpZ-jU-3ar" firstAttribute="top" secondItem="kzF-7c-ud8" secondAttribute="bottom" constant="25.670000000000002" id="vnD-DC-QyU"/>
-                            <constraint firstItem="Zg4-Ch-YTv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="108" id="xs0-sB-KCt"/>
+                            <constraint firstItem="Zg4-Ch-YTv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="107" id="xs0-sB-KCt"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0Do-AR-tBn" secondAttribute="trailing" constant="48" id="ype-YB-ENI"/>
                         </constraints>
                     </view>

@@ -10,9 +10,9 @@
 		3F0D32692B167DA2001F0AF2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0D32682B167DA1001F0AF2 /* User.swift */; };
 		3F0D326C2B169696001F0AF2 /* ParseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3F0D326B2B169696001F0AF2 /* ParseSwift */; };
 		3F0D326E2B1697F8001F0AF2 /* ViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0D326D2B1697F8001F0AF2 /* ViewController+Extensions.swift */; };
-		3F5198872B1817C700DC70B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F5198862B1817C700DC70B4 /* Main.storyboard */; };
 		3F8C43B52B0854050057070C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8C43B42B0854050057070C /* LoginViewController.swift */; };
 		3FC499A12B0BC64C009C9525 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC499A02B0BC64C009C9525 /* SignUpViewController.swift */; };
+		3FE7F8D52B181EA100C96B0E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FE7F8D42B181EA100C96B0E /* Main.storyboard */; };
 		7F6926112AE8521500050E2F /* api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6926102AE8521500050E2F /* api.swift */; };
 		7FE3D1D02ACF1061006E9CF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE3D1CF2ACF1061006E9CF8 /* AppDelegate.swift */; };
 		7FE3D1D22ACF1061006E9CF8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE3D1D12ACF1061006E9CF8 /* SceneDelegate.swift */; };
@@ -48,9 +48,9 @@
 /* Begin PBXFileReference section */
 		3F0D32682B167DA1001F0AF2 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = "../../../cop 4655 lab 6/lab_6/lab-insta-parse/Models/User.swift"; sourceTree = "<group>"; };
 		3F0D326D2B1697F8001F0AF2 /* ViewController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ViewController+Extensions.swift"; path = "../../../cop 4655 lab 6/lab_6/lab-insta-parse/Extensions/ViewController+Extensions.swift"; sourceTree = "<group>"; };
-		3F5198862B1817C700DC70B4 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../../../../Downloads/Main.storyboard; sourceTree = "<group>"; };
 		3F8C43B42B0854050057070C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3FC499A02B0BC64C009C9525 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		3FE7F8D42B181EA100C96B0E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		7F6926102AE8521500050E2F /* api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = api.swift; sourceTree = "<group>"; };
 		7FE3D1CC2ACF1061006E9CF8 /* FInal-Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FInal-Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FE3D1CF2ACF1061006E9CF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -124,8 +124,8 @@
 				3FC499A02B0BC64C009C9525 /* SignUpViewController.swift */,
 				7FE4BED02B00804500A94406 /* Cities.swift */,
 				7FE3D1CF2ACF1061006E9CF8 /* AppDelegate.swift */,
+				3FE7F8D42B181EA100C96B0E /* Main.storyboard */,
 				7FE3D1D12ACF1061006E9CF8 /* SceneDelegate.swift */,
-				3F5198862B1817C700DC70B4 /* Main.storyboard */,
 				3F0D32682B167DA1001F0AF2 /* User.swift */,
 				7FE3D1D32ACF1061006E9CF8 /* ViewController.swift */,
 				7FEE557C2B082B4400D9DAF0 /* MenuViewController.swift */,
@@ -267,9 +267,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7FE3D1DC2ACF1064006E9CF8 /* LaunchScreen.storyboard in Resources */,
-				3F5198872B1817C700DC70B4 /* Main.storyboard in Resources */,
 				7FE3D1D92ACF1064006E9CF8 /* Assets.xcassets in Resources */,
 				7FE3D2002ACF1090006E9CF8 /* README.md in Resources */,
+				3FE7F8D52B181EA100C96B0E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

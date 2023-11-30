@@ -11,7 +11,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     private enum Constants {
         static let loginNavigationControllerIdentifier = "LoginNavigationController"
-        static let feedNavigationControllerIdentifier = "FeedNavigationController"
+        static let feedNavigationControllerIdentifier = "loginIdentifer"
         static let storyboardIdentifier = "Main"
     }
     

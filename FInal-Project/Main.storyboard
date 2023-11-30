@@ -267,7 +267,7 @@
         <!--Game Mode-->
         <scene sceneID="IpD-92-0ia">
             <objects>
-                <viewController title="Game Mode" id="nVd-60-h8F" customClass="MenuViewController" customModule="FInal_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MenuViewController" title="Game Mode" id="nVd-60-h8F" customClass="MenuViewController" customModule="FInal_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KNd-8h-tfT">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -391,7 +391,7 @@
         <!--Navigation Controller-->
         <scene sceneID="hkN-4u-ekF">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="EiM-mS-hx9" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="FeedNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="EiM-mS-hx9" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="xVD-uw-MH3"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="0rI-bJ-7he">
@@ -494,7 +494,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yde-70-tEx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1448.0916030534352" y="-970.4225352112677"/>
+            <point key="canvasLocation" x="-1323" y="-1011"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="VQN-9y-j6L">
@@ -591,7 +591,7 @@
         <!--Navigation Controller-->
         <scene sceneID="2Nl-6a-28f">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VzL-H3-mn0" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="LoginNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="VzL-H3-mn0" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Xy4-gE-WgU">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -608,7 +608,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="IWK-5f-5Ss"/>
+        <segue reference="isy-I0-aPO"/>
         <segue reference="1G1-Bq-8Mw"/>
     </inferredMetricsTieBreakers>
     <resources>

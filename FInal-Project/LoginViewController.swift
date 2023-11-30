@@ -80,6 +80,10 @@ class LoginViewController: UIViewController {
               !password.isEmpty else {
 
             showMissingFieldsAlert()
+            
+            
+            
+            
             return
         }
         
@@ -91,10 +95,19 @@ class LoginViewController: UIViewController {
             switch result {
             case .success(let user):
                 print("✅ Successfully logged in as user: \(user)")
+                
 
                 // Post a notification that the user has successfully logged in.
                 NotificationCenter.default.post(name: Notification.Name("login"), object: nil)
 
+                
+                // Perform segue to the next controller
+             //   self?.performSegue(withIdentifier: "loginIdentifer", sender: nil)
+                // Instantiate the next view controller
+                let MenuViewController = self?.storyboard?.instantiateViewController(withIdentifier: "MenuViewController") as! MenuViewController
+                
+                self?.view.window?.rootViewController = MenuViewController
+                
             case .failure(let error):
                 // Show an alert for any errors
                 self?.showAlert(description: error.localizedDescription)

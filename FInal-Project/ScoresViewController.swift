@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ParseSwift
 
 class ScoresViewController: UIViewController {
     var correctAnswers: Int?

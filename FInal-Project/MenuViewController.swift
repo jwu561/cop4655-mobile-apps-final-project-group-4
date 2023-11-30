@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ParseSwift
 
 class MenuViewController: UIViewController {
     

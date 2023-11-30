@@ -35,7 +35,7 @@ class City: Equatable {
     }
 }
 
-var Cities = [miami, nyc, sanFran, barca, paris, berlin, tokyo, toronto, london, taipei, singapore, athens, sydney, vienna, montreal, cpnhgn, osaka, tampa, prague, cologne, jerusalem]
+//var Cities = [miami, nyc, sanFran, barca, paris, berlin, tokyo, toronto, london, taipei, singapore, athens, sydney, vienna, montreal, cpnhgn, osaka, tampa, prague, cologne, jerusalem, rome, brussels, venice, kristiansand, stockholm, bruges, hiroshima, lyon, helsinki, ottowa, christchurch, jurong, fiorentino, budapest, odense, geneva, vaduz, balzers, gibraltar, warsaw, lublin]
 
 var miami = City(name: "Miami", latitude: 25.7617, longitude: -80.1918, country: "United States of America", imageUrl: "https://example.com/path/to/miami.jpg")
 var nyc = City(name: "New York City", latitude: 40.75780, longitude: -73.9855, country: "United States of America", imageUrl: "https://example.com/path/to/nyc.jpg")
@@ -73,3 +73,30 @@ var tampa = City(name: "Tampa", latitude: 27.964157, longitude: -82.452606, coun
 var prague = City(name: "Prague", latitude: 50.0755, longitude: 14.4378, country: "Czech Republic")
 var cologne = City(name: "Cologne", latitude: 50.9375, longitude: 6.9603, country: "Germany")
 var jerusalem = City(name: "Jerusalem", latitude: 31.7683, longitude: 35.2137, country: "Israel")
+
+//var Cities = [rome, brussels, venice, kristiansand, stockholm, bruges, hiroshima, lyon, helsinki, ottowa, ontario]
+
+var rome = City(name: "Rome", latitude: 41.9028, longitude: 12.4964, country: "Italy")
+var brussels = City(name: "Brussels", latitude: 50.8476, longitude: 4.3572, country: "Belgium")
+var venice = City(name: "Venice", latitude: 45.4408, longitude: 12.3155, country: "Italy")
+var kristiansand = City(name: "Kristiansand", latitude: 58.1599, longitude: 8.0182, country: "Norway")
+var stockholm = City(name: "Stockholm", latitude: 59.3293, longitude: 18.0686, country: "Sweden")
+var bruges = City(name: "Bruges", latitude: 51.2092, longitude: 3.2248, country: "Belgium")
+var hiroshima = City(name: "Hiroshima", latitude: 34.3853, longitude: 132.4553, country: "Japan")
+var lyon = City(name: "Lyon", latitude: 45.7640, longitude: 4.8357, country: "France")
+var helsinki = City(name: "Helsinki", latitude: 60.1699, longitude: 24.9384, country: "Finland")
+var ottowa = City(name: "Ottowa", latitude: 45.4215, longitude:  -75.6972, country: "Canada")
+//var ontario = City(name: "Ontario", latitude: 51.2538, longitude:  -85.3232, country: "Canada")
+
+var christchurch = City(name: "Christchurch", latitude: -43.5320, longitude:  172.6306, country: "New Zealand")
+var jurong = City(name: "Jurong", latitude: 1.3368 , longitude:  103.6942, country: "New Zealand")
+var fiorentino = City(name: "serravalle", latitude: 43.9690, longitude:  12.4774, country: "San Marino")
+var budapest = City(name: "Budapest", latitude: 47.4979 , longitude:  19.0402, country: "Hungary")
+var odense = City(name: "Odense", latitude: 55.4038 , longitude:  10.4024, country: "Demark")
+
+var geneva = City(name: "Geneva", latitude: 46.2044, longitude:  6.1432, country: "Switzerland")
+var vaduz = City(name: "vaduz", latitude: 47.1410 , longitude:  9.5209, country: "Liechtenstein")
+var balzers = City(name: "balzers", latitude: 47.0656 , longitude:  9.5075, country: "Liechtenstein")
+var gibraltar = City(name: "Gibraltar", latitude: 36.1408 , longitude:  -5.3536, country: "United Kingdom")
+var warsaw = City(name: "Warsaw", latitude: 52.2297 , longitude:  21.0122, country: "Poland")
+var lublin = City(name: "Lublin", latitude: 51.2465 , longitude:  22.5684, country: "Poland")

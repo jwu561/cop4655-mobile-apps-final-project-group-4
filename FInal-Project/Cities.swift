@@ -133,8 +133,6 @@ func nameToCountryCode(_ countryName: String) -> String {
         return "CA"
     case "United Kingdom":
         return "GB"
-    case "Mexico":
-        return "MX"
     case "Australia":
         return "AU"
     case "Singapore":
@@ -184,8 +182,13 @@ func nameToCountryCode(_ countryName: String) -> String {
         return "HR"
     case "Andorra":
         return "AD"
+    case "Switzerland":
+        return "CH"
+    case "The Netherlands":
+        return "NL"
     default:
         // Handle cases for other countries if needed
         return "Unknown"
     }
 }
+

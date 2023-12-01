@@ -3,4 +3,198 @@
    uuid = "E824A6BC-3FEA-46B9-AF17-8400E8633222"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DDC0DDAE-8D17-4234-95CE-C75501ACDD7E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FInal-Project/LoginViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
+            landmarkName = "onLoginTapped(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "DDC0DDAE-8D17-4234-95CE-C75501ACDD7E - 9c0fde676409e591"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FInal_Project.LoginViewController.onLoginTapped(Any) -&gt; ()"
+                  moduleName = "FInal-Project"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/student/Documents/GitHub/cop4655-mobile-apps-final-project-group-4/FInal-Project/LoginViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "93"
+                  endingLineNumber = "93"
+                  offsetFromSymbolStart = "904">
+               </Location>
+               <Location
+                  uuid = "DDC0DDAE-8D17-4234-95CE-C75501ACDD7E - cec4d718d3ab57c2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;FInal_Project.User, ParseSwift.ParseError&gt;) -&gt; () in FInal_Project.LoginViewController.onLoginTapped(Any) -&gt; ()"
+                  moduleName = "FInal-Project"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/student/Documents/GitHub/cop4655-mobile-apps-final-project-group-4/FInal-Project/LoginViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "93"
+                  endingLineNumber = "93"
+                  offsetFromSymbolStart = "272">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "98699ACC-BC0D-4014-8CB4-471DD466BEB2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FInal-Project/SceneDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "login()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "98699ACC-BC0D-4014-8CB4-471DD466BEB2 - 6c2035c2a8a4d232"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FInal_Project.SceneDelegate.login() -&gt; ()"
+                  moduleName = "FInal-Project"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/student/Documents/GitHub/cop4655-mobile-apps-final-project-group-4/FInal-Project/SceneDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "36">
+               </Location>
+               <Location
+                  uuid = "98699ACC-BC0D-4014-8CB4-471DD466BEB2 - 6c2035c2a8a4d5c4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FInal_Project.SceneDelegate.login() -&gt; ()"
+                  moduleName = "FInal-Project"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/student/Documents/GitHub/cop4655-mobile-apps-final-project-group-4/FInal-Project/SceneDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "36">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CCFD79D5-243E-4E66-A983-A7758CBEF1ED"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FInal-Project/SceneDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "Constants"
+            landmarkType = "13">
+            <Locations>
+               <Location
+                  uuid = "CCFD79D5-243E-4E66-A983-A7758CBEF1ED - 8471300d3fbb50db"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "one-time initialization function for loginNavigationControllerIdentifier"
+                  moduleName = "FInal-Project"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/student/Documents/GitHub/cop4655-mobile-apps-final-project-group-4/FInal-Project/SceneDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  uuid = "CCFD79D5-243E-4E66-A983-A7758CBEF1ED - c7da4850f8e1f766"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FInal_Project.SceneDelegate.Constants.loginNavigationControllerIdentifier.unsafeMutableAddressor : Swift.String"
+                  moduleName = "FInal-Project"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/student/Documents/GitHub/cop4655-mobile-apps-final-project-group-4/FInal-Project/SceneDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F8E01A94-A2D4-4B32-8406-58C32F239A65"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FInal-Project/MenuViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "onLogOutTapped(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "71453D94-C832-4020-868A-D1ACE6D519CE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FInal-Project/MenuViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
+            landmarkName = "showConfirmLogoutAlert()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "281F7C9A-B75F-4A42-95C5-88FE25168CC7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FInal-Project/SceneDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "scene(_:willConnectTo:options:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

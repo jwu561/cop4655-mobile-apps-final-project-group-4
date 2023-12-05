@@ -10,7 +10,7 @@ import MapKit
 import Swift
 import WebKit
 
-
+var viewedCities: [City] = []
 // .isEmpty is an array property
 // .count is an array property
 // .first and .last are obvious
@@ -20,7 +20,7 @@ import WebKit
 //.removeLast()
 //.remove(at: int)
 //.contains(element) returns true if array contains said alement
-var viewedCities: [City] = []
+
 var currentCity: City?
 var currentQuestion = 1
 
@@ -35,9 +35,8 @@ class ViewController: UIViewController, WKNavigationDelegate {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "lookAroundSegue" {
-            if let lookAroundVC = segue.destination as? MKLookAroundViewController {
-                self.lookAroundViewController = lookAroundVC
-                lookAroundVC.view.isUserInteractionEnabled = true
+            if let lookAroundViewController = segue.destination as? MKLookAroundViewController {
+                self.lookAroundViewController = lookAroundViewController
             }
         }
         if segue.identifier == "quizToScores" {
@@ -70,19 +69,14 @@ class ViewController: UIViewController, WKNavigationDelegate {
     
     
     @IBAction func lookAroundTapped(_ sender: Any) {
-        guard let currentCity = currentCity else {
-            print("Current city is not set.")
-            return
-        }
-
-        if viewedCities.count == Cities.count {
-            print("No more cities on the list. You have reached the end of the quiz.")
+        if(viewedCities.count == Cities.count){
+            print("no more cities on the list. You have reached the end of the quiz.")
+            NomorecityLabel.text = "no more cities on the list. You have reached the end of the quiz."
             feedbackLabel.text = ""
             return
         }
-
-        print("Viewed cities: ", viewedCities.count)
-        fetchLookAroundScene(with: CLLocationCoordinate2D(latitude: currentCity.latitude, longitude: currentCity.longitude))
+        print("viewed cities: ", viewedCities.count)
+        fetchLookAroundScene(with: CLLocationCoordinate2D(latitude: currentCity!.latitude, longitude: currentCity!.longitude))
         performSegue(withIdentifier: "lookAroundSegue", sender: nil)
     }
     
@@ -157,17 +151,22 @@ class ViewController: UIViewController, WKNavigationDelegate {
         
         Task {
             do {
+                // Issue request
                 guard let lookAroundScene = try await lookAroundSceneRequest.scene else {
                     print("LookAround data is not available for the location.")
                     return
                 }
+                
+                // Assign the scene to the LookAroundViewController
                 lookAroundViewController?.scene = lookAroundScene
+                
+                // Perform the segue
+                //performSegue(withIdentifier: "lookAroundSegue", sender: nil)
             } catch {
                 print("Error fetching LookAround scene: \(error)")
             }
         }
     }
-
     //this function randomizes the multiple choices
     func randomizedChoices(){
         var indexes: [Int] = [1, 2, 3, 4]
@@ -287,7 +286,7 @@ class ViewController: UIViewController, WKNavigationDelegate {
         
     
     override func viewDidLoad() {
-        super.viewDidLoad()
+        //reset global variables and refresh other things
         currentCity = Cities.randomElement()
         viewedCities.append(currentCity!)
         randomizedChoices()
@@ -297,11 +296,11 @@ class ViewController: UIViewController, WKNavigationDelegate {
         
         //updateCityImage()
         feedbackLabel.text = ""
-  
+        NomorecityLabel.text = ""
         
         if let mode = hardMode {
             print("HARD MODE IS: ", mode)
-            if hardMode == true {
+            if hardMode == true{
                 hintBtn.isHidden = true
             }
         }
@@ -445,4 +444,5 @@ class ViewController: UIViewController, WKNavigationDelegate {
 //class MKLookAroundScene {
 //    //opaque class with no properties, it acts as a token that ensures the availability of lookaround imagery for a requested location
 //}
+
 

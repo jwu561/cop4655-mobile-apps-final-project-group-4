@@ -12,6 +12,10 @@ class ScoresViewController: UIViewController {
     var correctAnswers: Int?
     var wrongAnswers: Int?
 
+    
+    @IBOutlet weak var usernameLabel: UILabel!
+    
+    
     @IBOutlet weak var menuButton: UIButton!
     
     @IBOutlet weak var scoreLabel: UILabel!
@@ -21,6 +25,8 @@ class ScoresViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        checkUserAuthentication()
 
         // Access the data
         if let corrects = correctAnswers, let wrongs = wrongAnswers {
@@ -59,7 +65,20 @@ class ScoresViewController: UIViewController {
     }
     
     
-    
+    func checkUserAuthentication() {
+        if let currentUser = (User.current ) {
+            // The user is logged in
+            let username = currentUser.username ?? "Unknown User"
+            print("User is logged in as \(username)")
+            
+            // Assuming you have a UILabel named usernameLabel
+            usernameLabel.text = "\(username)"
+            
+        } else {
+            // The user is not logged in
+            print("User is not logged in")
+        }
+    }
     
     
     

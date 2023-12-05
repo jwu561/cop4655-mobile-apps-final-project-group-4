@@ -11,6 +11,7 @@ import ParseSwift
 class MenuViewController: UIViewController {
     
     
+    @IBOutlet weak var usernameLabel: UILabel!
     
    
     
@@ -56,7 +57,7 @@ class MenuViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-     
+        checkUserAuthentication()
         
         // Do any additional setup after loading the view.
     }
@@ -73,6 +74,7 @@ class MenuViewController: UIViewController {
     */
     
     
+  
 
     
 
@@ -94,7 +96,21 @@ class MenuViewController: UIViewController {
     
     
     
-    
+    func checkUserAuthentication() {
+        if let currentUser = (User.current ) {
+            // The user is logged in
+            let username = currentUser.username ?? "Unknown User"
+            print("User is logged in as \(username)")
+            
+            // Assuming you have a UILabel named usernameLabel
+            usernameLabel.text = "logged in as \(username)"
+            
+        } else {
+            // The user is not logged in
+            print("User is not logged in")
+        }
+    }
+
     
     
     

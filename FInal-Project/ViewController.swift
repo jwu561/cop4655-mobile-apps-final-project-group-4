@@ -65,6 +65,7 @@ class ViewController: UIViewController, WKNavigationDelegate {
     @IBOutlet weak var NomorecityLabel: UITextView!
     
     @IBOutlet weak var hintBtn: UIButton!
+    @IBOutlet weak var scoreScreenBtn: UIButton!
     
     @IBOutlet weak var flagWebView: WKWebView!
     
@@ -263,6 +264,11 @@ class ViewController: UIViewController, WKNavigationDelegate {
             self?.flagWebView.isHidden = false
         }
     }
+    
+    @IBAction func scoresBtnTapped(_ sender: Any) {
+        performSegue(withIdentifier: "quizToScores", sender: nil)
+    }
+    
 //            // Make sure we have data
 //            guard let data = data else { print("❌ Data is nil"); return}
 //            do {

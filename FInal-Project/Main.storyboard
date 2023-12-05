@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< Updated upstream
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VzL-H3-mn0">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+=======
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VzL-H3-mn0">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+>>>>>>> Stashed changes
         <capability name="Look around view controllers" minToolsVersion="14.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -67,6 +75,7 @@
                                     <action selector="optionBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gTp-eg-POk"/>
                                 </connections>
                             </button>
+<<<<<<< Updated upstream
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u3N-oW-3fh">
                                 <rect key="frame" x="103" y="337" width="184" height="35"/>
                                 <constraints>
@@ -79,6 +88,8 @@
                                     <action selector="lookAroundTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dae-mO-v5I"/>
                                 </connections>
                             </button>
+=======
+>>>>>>> Stashed changes
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Correct" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KpZ-jU-3ar">
                                 <rect key="frame" x="167.66666666666666" y="759.66666666666663" width="58" height="23"/>
                                 <constraints>
@@ -139,6 +150,13 @@
                                     <action selector="scoresBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UcH-Cj-y2r"/>
                                 </connections>
                             </button>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Myv-ah-DNw">
+                                <rect key="frame" x="76" y="241" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="QUP-3F-3rV" kind="embed" id="UC1-M6-aKB"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -146,14 +164,12 @@
                             <constraint firstItem="0iC-XQ-VBC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="2AM-hP-Xwr"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0iC-XQ-VBC" secondAttribute="trailing" constant="48" id="47r-4p-2hb"/>
                             <constraint firstItem="Zg4-Ch-YTv" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="5CY-Ad-cau"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="u3N-oW-3fh" secondAttribute="trailing" constant="106" id="5vM-GE-DAP"/>
                             <constraint firstItem="kzF-7c-ud8" firstAttribute="top" secondItem="0iC-XQ-VBC" secondAttribute="bottom" constant="7.6666666666666288" id="5yY-tI-EC4"/>
                             <constraint firstItem="XKn-94-aim" firstAttribute="top" secondItem="Zg4-Ch-YTv" secondAttribute="bottom" constant="10" id="80b-ps-Avx"/>
                             <constraint firstItem="XKn-94-aim" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="47" id="9Zi-bm-k44"/>
                             <constraint firstItem="KpZ-jU-3ar" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="350" id="CUj-jY-RI0"/>
                             <constraint firstItem="Zg4-Ch-YTv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="FWm-AV-gXd"/>
                             <constraint firstItem="PLH-Vx-bqu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="KFi-Yj-1o4"/>
-                            <constraint firstItem="u3N-oW-3fh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="103" id="KiH-ng-RMw"/>
                             <constraint firstItem="0iC-XQ-VBC" firstAttribute="top" secondItem="4dG-Wk-bg3" secondAttribute="bottom" constant="33" id="OFs-UN-e2L"/>
                             <constraint firstItem="KpZ-jU-3ar" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Pg8-3N-lWu"/>
                             <constraint firstItem="0Do-AR-tBn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="Q3D-n0-2Pl"/>
@@ -164,7 +180,6 @@
                             <constraint firstItem="0Do-AR-tBn" firstAttribute="top" secondItem="PLH-Vx-bqu" secondAttribute="bottom" constant="30" id="eDK-xb-CV4"/>
                             <constraint firstItem="kzF-7c-ud8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="92" id="eLE-H3-b0x"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kzF-7c-ud8" secondAttribute="trailing" constant="91" id="lyw-fu-OBL"/>
-                            <constraint firstItem="PLH-Vx-bqu" firstAttribute="top" secondItem="u3N-oW-3fh" secondAttribute="bottom" constant="45" id="vaF-YM-2OM"/>
                             <constraint firstItem="KpZ-jU-3ar" firstAttribute="top" secondItem="kzF-7c-ud8" secondAttribute="bottom" constant="25.670000000000002" id="vnD-DC-QyU"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XKn-94-aim" secondAttribute="trailing" constant="46" id="y0W-AQ-403"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0Do-AR-tBn" secondAttribute="trailing" constant="48" id="ype-YB-ENI"/>
@@ -180,7 +195,7 @@
                         <outlet property="feedbackLabel" destination="KpZ-jU-3ar" id="Du5-Eb-Pml"/>
                         <outlet property="flagWebView" destination="XKn-94-aim" id="wsW-rU-1Rt"/>
                         <outlet property="hintBtn" destination="NNR-U6-WDY" id="pf0-eU-4Ic"/>
-                        <outlet property="lookAround" destination="u3N-oW-3fh" id="cje-im-7pK"/>
+                        <outlet property="lookaroundContainerView" destination="Myv-ah-DNw" id="3Tu-FR-ZEh"/>
                         <outlet property="questionLabel" destination="Zg4-Ch-YTv" id="qpU-2I-oyZ"/>
                         <outlet property="scoreScreenBtn" destination="uhi-oA-xEs" id="RlR-ud-22o"/>
                         <segue destination="QUP-3F-3rV" kind="show" identifier="lookAroundSegue" id="IJr-0v-8I1"/>
@@ -287,7 +302,7 @@
                 </lookAroundViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r7g-GD-i9I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1356" y="461"/>
+            <point key="canvasLocation" x="3095" y="-280"/>
         </scene>
         <!--Game Mode-->
         <scene sceneID="IpD-92-0ia">
@@ -633,7 +648,12 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="awL-nr-hch"/>
+<<<<<<< Updated upstream
         <segue reference="1G1-Bq-8Mw"/>
+=======
+        <segue reference="IJr-0v-8I1"/>
+        <segue reference="rrl-P6-pPd"/>
+>>>>>>> Stashed changes
     </inferredMetricsTieBreakers>
     <resources>
         <image name="SCOREBOARD" width="730" height="200"/>

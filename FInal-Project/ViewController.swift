@@ -56,8 +56,8 @@ class ViewController: UIViewController, WKNavigationDelegate {
     @IBOutlet weak var buttonD: UIButton!
     
     //@IBOutlet weak var cityImageView: UIImageView!
-    @IBOutlet weak var lookAround: UIButton!
     
+    @IBOutlet weak var lookaroundContainerView: UIView!
     
     @IBOutlet weak var feedbackLabel: UILabel!
     
@@ -70,105 +70,57 @@ class ViewController: UIViewController, WKNavigationDelegate {
     @IBOutlet weak var flagWebView: WKWebView!
     
     
-    @IBAction func lookAroundTapped(_ sender: Any) {
-        if(viewedCities.count == Cities.count){
-            print("no more cities on the list. You have reached the end of the quiz.")
-            NomorecityLabel.text = "no more cities on the list. You have reached the end of the quiz."
-            feedbackLabel.text = ""
-            return
-        }
-        print("viewed cities: ", viewedCities.count)
-        fetchLookAroundScene(with: CLLocationCoordinate2D(latitude: currentCity!.latitude, longitude: currentCity!.longitude))
-        performSegue(withIdentifier: "lookAroundSegue", sender: nil)
-    }
     
     
     @IBAction func optionBtnTapped(_ sender: UIButton){
         if(viewedCities.count == Cities.count ||
-           (hardMode == false && viewedCities.count > 9)){
+           (hardMode == false && viewedCities.count > 9)) {
             print("no more cities on the list. You have reached the end.")
             NomorecityLabel.text = "no more cities on the list. You have reached the end."
             feedbackLabel.text = ""
             performSegue(withIdentifier: "quizToScores", sender: nil)
             return
         }
-        //note, the force unwrap with ! may be risky
-        //should only be used if it is certain that the object is not nil
-        print(sender.titleLabel!.text!)
-        //I need to slice the string and remove the first 3 letters
-        // getting a substring in Swift is stupid
+        
         let text = sender.titleLabel!.text!
         let startIndex = text.index(text.startIndex, offsetBy: 3)
         let countryName = String(text[startIndex...])
-        //print(countryName)
         
-        
-        
-        if (currentCity!.country == countryName){
-            print("correct!")
-            correctAnswers = correctAnswers + 1
+        if (currentCity!.country == countryName) {
+            correctAnswers += 1
             feedbackLabel.text = "Correct!"
             flagWebView.isHidden = true
             
-            //increment the question number, change the label
-            currentQuestion = currentQuestion + 1
-            print(currentQuestion)
+            currentQuestion += 1
             questionLabel.text = "\(currentQuestion). What country is this?"
-            
-            //get a new random city
-            currentCity = Cities.randomElement()
-            
-            //if it's not in the "viewedCities" list, then add it
-            if(!viewedCities.contains(currentCity!)){
-                viewedCities.append(currentCity!)
-            }
-            //else, do while loop until current City is not in viewedCities, or until viewedCities contains all cities.
-            else{
-                while(viewedCities.contains(currentCity!) && viewedCities.count != Cities.count){
-                    currentCity = Cities.randomElement()
-                }
-                if(viewedCities.count == Cities.count){
-                    print("No more cities on the list!")
-                }
-                else{
-                    viewedCities.append(currentCity!)
-                }
-            }
-            print("answer: ",currentCity?.country)
-            
-            //randomize the choices
+
+            // Call initializeCurrentCity() to fetch a new city and its LookAround scene
+            initializeCurrentCity()
+
+            // Call randomizedChoices() to update the choices on the UI
             randomizedChoices()
-            
         } else {
-            print("Wrong.")
-            wrongAnswers = wrongAnswers + 1
+            wrongAnswers += 1
             feedbackLabel.text = "Wrong."
         }
-        
     }
     
-    // Function to fetch LookAround scene
     func fetchLookAroundScene(with coordinate: CLLocationCoordinate2D) {
         let lookAroundSceneRequest = MKLookAroundSceneRequest(coordinate: coordinate)
         
         Task {
             do {
-                // Issue request
                 guard let lookAroundScene = try await lookAroundSceneRequest.scene else {
                     print("LookAround data is not available for the location.")
                     return
                 }
-                
-                // Assign the scene to the LookAroundViewController
                 lookAroundViewController?.scene = lookAroundScene
-                
-                // Perform the segue
-                //performSegue(withIdentifier: "lookAroundSegue", sender: nil)
             } catch {
                 print("Error fetching LookAround scene: \(error)")
             }
         }
     }
+    
     //this function randomizes the multiple choices
     func randomizedChoices(){
         var indexes: [Int] = [1, 2, 3, 4]
@@ -265,54 +217,49 @@ class ViewController: UIViewController, WKNavigationDelegate {
         }
     }
     
+
+    func initializeCurrentCity() {
+        currentCity = Cities.randomElement()
+        if let city = currentCity {
+            fetchLookAroundScene(with: CLLocationCoordinate2D(latitude: city.latitude, longitude: city.longitude))
+            viewedCities.append(city)  // Track the city as viewed
+        }
+    }
+
+    
+    
     @IBAction func scoresBtnTapped(_ sender: Any) {
         performSegue(withIdentifier: "quizToScores", sender: nil)
     }
     
-//            // Make sure we have data
-//            guard let data = data else { print("❌ Data is nil"); return}
-//            do {
-//               let jsonDictionary = try JSONSerialization.jsonObject(with: data) as? [String: Any]
-//               if let jsonDictionary = jsonDictionary as? [String: Any],
-//                   let data = jsonDictionary["data"] as? [String: Any],
-//                   let flagImageUri = data["flagImageUri"] as? String,
-//                   let imageURL = URL(string: flagImageUri) {
-//                   //print(jsonDictionary)
-//                   print(flagImageUri)
-//               } else {
-//                   print("❌ Unable to extract Flag Image URI from JSON")
-//               }
-//           } catch {
-//               print("❌ Error parsing JSON: \(error.localizedDescription)")
-//           }
-        
-        
-        
-        
-        
-        
-    
+
     override func viewDidLoad() {
+        super.viewDidLoad()
         //reset global variables and refresh other things
         currentQuestion = 1
         correctAnswers = 0
         wrongAnswers = 0
         viewedCities = []
         
-        currentCity = Cities.randomElement()
-        viewedCities.append(currentCity!)
-        randomizedChoices()
-        flagWebView.isHidden = true
-        super.viewDidLoad()
+        if lookAroundViewController == nil {
+            if let lookAroundVC = self.children.compactMap({ $0 as? MKLookAroundViewController }).first {
+                self.lookAroundViewController = lookAroundVC
+            }
+        }
         
+        // Initialize the current city and fetch its Look Around scene
+        initializeCurrentCity()
+        randomizedChoices()
+        
+        // Other UI setups
+        flagWebView.isHidden = true
         feedbackLabel.text = ""
         NomorecityLabel.text = ""
         
+        // Handle hard mode setup if necessary
         if let mode = hardMode {
             print("HARD MODE IS: ", mode)
-            if hardMode == true{
-                hintBtn.isHidden = true
-            }
+            hintBtn.isHidden = mode ? true : false
         }
     }
     

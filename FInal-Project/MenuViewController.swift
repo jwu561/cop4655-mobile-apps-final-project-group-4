@@ -13,7 +13,8 @@ class MenuViewController: UIViewController {
     
     @IBOutlet weak var usernameLabel: UILabel!
     
-   
+    @IBOutlet weak var logOutBtn: UIButton!
+    
     
     var isLoggedIn: Bool = false // Set this based on the user's authentication status
     
@@ -104,10 +105,14 @@ class MenuViewController: UIViewController {
             
             // Assuming you have a UILabel named usernameLabel
             usernameLabel.text = "logged in as \(username)"
+            usernameLabel.isHidden = false
+            logOutBtn.isHidden = false
             
         } else {
             // The user is not logged in
             print("User is not logged in")
+            usernameLabel.isHidden = true
+            logOutBtn.isHidden = true
         }
     }
 

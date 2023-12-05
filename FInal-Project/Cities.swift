@@ -35,7 +35,8 @@ class City: Equatable {
     }
 }
 
-var Cities = [miami, nyc, sanFran, barca, paris, berlin, tokyo, toronto, london, taipei, singapore, athens, sydney, vienna, montreal, cpnhgn, osaka, tampa, prague, cologne, jerusalem, rome, brussels, venice, kristiansand, stockholm, bruges, hiroshima, lyon, helsinki, ottowa, christchurch, jurong, fiorentino, budapest, odense, geneva, vaduz, balzers, gibraltar, warsaw, lublin, madrid, lisbon, amstrdm, hong, zagreb, valcia, porto, ljblj, andorra, frank]
+var Cities = [miami, nyc, sanFran, barca, paris, berlin, tokyo, toronto, london, taipei, singapore, athens, sydney, vienna, montreal, cpnhgn, osaka, tampa, prague, cologne, jerusalem, rome, brussels, venice, kristiansand, stockholm, bruges, hiroshima, lyon, helsinki, ottowa, christchurch, jurong, fiorentino, budapest, odense, geneva, vaduz, balzers, gibraltar, warsaw, madrid, lisbon, amstrdm, hong, zagreb, valcia, porto, ljblj, andorra, frank]
+//note: I removed lublin from the above list because it's not working
 //var Cities = [madrid, frank, toronto, montreal, rome, fiorentino]
 
 var miami = City(name: "Miami", latitude: 25.7617, longitude: -80.1918, country: "United States of America", imageUrl: "https://example.com/path/to/miami.jpg")
@@ -100,6 +101,8 @@ var vaduz = City(name: "Vaduz", latitude: 47.1410 , longitude:  9.5209, country:
 var balzers = City(name: "Balzers", latitude: 47.0656 , longitude:  9.5075, country: "Liechtenstein")
 var gibraltar = City(name: "Gibraltar", latitude: 36.1408 , longitude:  -5.3536, country: "United Kingdom")
 var warsaw = City(name: "Warsaw", latitude: 52.2297 , longitude:  21.0122, country: "Poland")
+
+//lublin is currently not working
 var lublin = City(name: "Lublin", latitude: 51.2465 , longitude:  22.5684, country: "Poland")
 
 

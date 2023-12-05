@@ -129,6 +129,15 @@
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uhi-oA-xEs">
+                                <rect key="frame" x="32" y="714" width="77" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Scores"/>
+                                <connections>
+                                    <action selector="scoresBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UcH-Cj-y2r"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -172,6 +181,7 @@
                         <outlet property="hintBtn" destination="NNR-U6-WDY" id="pf0-eU-4Ic"/>
                         <outlet property="lookAround" destination="u3N-oW-3fh" id="cje-im-7pK"/>
                         <outlet property="questionLabel" destination="Zg4-Ch-YTv" id="qpU-2I-oyZ"/>
+                        <outlet property="scoreScreenBtn" destination="uhi-oA-xEs" id="RlR-ud-22o"/>
                         <segue destination="QUP-3F-3rV" kind="show" identifier="lookAroundSegue" id="IJr-0v-8I1"/>
                         <segue destination="JTU-Cb-mpA" kind="show" identifier="quizToScores" id="rrl-P6-pPd"/>
                     </connections>

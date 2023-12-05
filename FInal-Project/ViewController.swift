@@ -37,6 +37,7 @@ class ViewController: UIViewController, WKNavigationDelegate {
         if segue.identifier == "lookAroundSegue" {
             if let lookAroundViewController = segue.destination as? MKLookAroundViewController {
                 self.lookAroundViewController = lookAroundViewController
+                lookAroundViewController.view.isUserInteractionEnabled = true //I don't think this does anything
             }
         }
         if segue.identifier == "quizToScores" {
@@ -64,6 +65,7 @@ class ViewController: UIViewController, WKNavigationDelegate {
     @IBOutlet weak var NomorecityLabel: UITextView!
     
     @IBOutlet weak var hintBtn: UIButton!
+    @IBOutlet weak var scoreScreenBtn: UIButton!
     
     @IBOutlet weak var flagWebView: WKWebView!
     
@@ -262,6 +264,11 @@ class ViewController: UIViewController, WKNavigationDelegate {
             self?.flagWebView.isHidden = false
         }
     }
+    
+    @IBAction func scoresBtnTapped(_ sender: Any) {
+        performSegue(withIdentifier: "quizToScores", sender: nil)
+    }
+    
 //            // Make sure we have data
 //            guard let data = data else { print("❌ Data is nil"); return}
 //            do {
@@ -287,14 +294,17 @@ class ViewController: UIViewController, WKNavigationDelegate {
     
     override func viewDidLoad() {
         //reset global variables and refresh other things
+        currentQuestion = 1
+        correctAnswers = 0
+        wrongAnswers = 0
+        viewedCities = []
+        
         currentCity = Cities.randomElement()
         viewedCities.append(currentCity!)
         randomizedChoices()
         flagWebView.isHidden = true
         super.viewDidLoad()
         
-        
-        //updateCityImage()
         feedbackLabel.text = ""
         NomorecityLabel.text = ""
         

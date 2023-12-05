@@ -9,7 +9,7 @@ import UIKit
 import MapKit
 import Swift
 
-var viewedCities: [City] = []
+
 // .isEmpty is an array property
 // .count is an array property
 // .first and .last are obvious
@@ -19,7 +19,7 @@ var viewedCities: [City] = []
 //.removeLast()
 //.remove(at: int)
 //.contains(element) returns true if array contains said alement
-
+var viewedCities: [City] = []
 var currentCity: City?
 var currentQuestion = 1
 
@@ -33,8 +33,9 @@ class ViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "lookAroundSegue" {
-            if let lookAroundViewController = segue.destination as? MKLookAroundViewController {
-                self.lookAroundViewController = lookAroundViewController
+            if let lookAroundVC = segue.destination as? MKLookAroundViewController {
+                self.lookAroundViewController = lookAroundVC
+                lookAroundVC.view.isUserInteractionEnabled = true
             }
         }
         if segue.identifier == "quizToScores" {
@@ -52,7 +53,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var buttonC: UIButton!
     @IBOutlet weak var buttonD: UIButton!
     
-    @IBOutlet weak var cityImageView: UIImageView!
     @IBOutlet weak var lookAround: UIButton!
     
     
@@ -65,14 +65,19 @@ class ViewController: UIViewController {
     
     
     @IBAction func lookAroundTapped(_ sender: Any) {
-        if(viewedCities.count == Cities.count){
-            print("no more cities on the list. You have reached the end of the quiz.")
-            NomorecityLabel.text = "no more cities on the list. You have reached the end of the quiz."
+        guard let currentCity = currentCity else {
+            print("Current city is not set.")
+            return
+        }
+
+        if viewedCities.count == Cities.count {
+            print("No more cities on the list. You have reached the end of the quiz.")
             feedbackLabel.text = ""
             return
         }
-        print("viewed cities: ", viewedCities.count)
-        fetchLookAroundScene(with: CLLocationCoordinate2D(latitude: currentCity!.latitude, longitude: currentCity!.longitude))
+
+        print("Viewed cities: ", viewedCities.count)
+        fetchLookAroundScene(with: CLLocationCoordinate2D(latitude: currentCity.latitude, longitude: currentCity.longitude))
         performSegue(withIdentifier: "lookAroundSegue", sender: nil)
     }
     
@@ -146,22 +151,17 @@ class ViewController: UIViewController {
         
         Task {
             do {
-                // Issue request
                 guard let lookAroundScene = try await lookAroundSceneRequest.scene else {
                     print("LookAround data is not available for the location.")
                     return
                 }
-                
-                // Assign the scene to the LookAroundViewController
                 lookAroundViewController?.scene = lookAroundScene
-                
-                // Perform the segue
-                //performSegue(withIdentifier: "lookAroundSegue", sender: nil)
             } catch {
                 print("Error fetching LookAround scene: \(error)")
             }
         }
     }
+
     //this function randomizes the multiple choices
     func randomizedChoices(){
         var indexes: [Int] = [1, 2, 3, 4]
@@ -216,40 +216,21 @@ class ViewController: UIViewController {
     }
     
     override func viewDidLoad() {
-        //reset global variables and refresh other things
+        super.viewDidLoad()
         currentCity = Cities.randomElement()
         viewedCities.append(currentCity!)
         randomizedChoices()
-        super.viewDidLoad()
-        
-        
-        updateCityImage()
         feedbackLabel.text = ""
-        NomorecityLabel.text = ""
+  
         
         if let mode = hardMode {
             print("HARD MODE IS: ", mode)
-            if hardMode == true{
+            if hardMode == true {
                 hintBtn.isHidden = true
             }
         }
     }
     
-    func updateCityImage() {
-        guard let imageUrlString = currentCity?.imageUrl,
-              let imageUrl = URL(string: imageUrlString) else {
-            print("Invalid image URL")
-            return
-        }
-        
-        
-        URLSession.shared.dataTask(with: imageUrl) { data, response, error in
-            guard let data = data, let image = UIImage(data: data) else { return }
-            DispatchQueue.main.async {
-                self.cityImageView.image = image
-            }
-        }.resume()
-    }
     
 }
 // // previously this was right below func lookAroundTapped

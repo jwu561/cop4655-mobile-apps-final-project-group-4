@@ -10,6 +10,13 @@ import ParseSwift
 
 class MenuViewController: UIViewController {
     
+    
+    @IBOutlet weak var usernameLabel: UILabel!
+    
+   
+    
+    var isLoggedIn: Bool = false // Set this based on the user's authentication status
+    
     var hardMode = false
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -50,6 +57,8 @@ class MenuViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        checkUserAuthentication()
+        
         // Do any additional setup after loading the view.
     }
     
@@ -63,5 +72,48 @@ class MenuViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    
+  
+
+    
+
+    
+    @IBAction func onLogOutTapped(_ sender: Any) {
+        showConfirmLogoutAlert()
+    }
+
+    private func showConfirmLogoutAlert() {
+        let alertController = UIAlertController(title: "Log out of your account?", message: nil, preferredStyle: .alert)
+        let logOutAction = UIAlertAction(title: "Log out", style: .destructive) { _ in
+            NotificationCenter.default.post(name: Notification.Name("logout"), object: nil)
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        alertController.addAction(logOutAction)
+        alertController.addAction(cancelAction)
+        present(alertController, animated: true)
+    }
+    
+    
+    
+    func checkUserAuthentication() {
+        if let currentUser = (User.current ) {
+            // The user is logged in
+            let username = currentUser.username ?? "Unknown User"
+            print("User is logged in as \(username)")
+            
+            // Assuming you have a UILabel named usernameLabel
+            usernameLabel.text = "logged in as \(username)"
+            
+        } else {
+            // The user is not logged in
+            print("User is not logged in")
+        }
+    }
+
+    
+    
+    
+    
 
 }

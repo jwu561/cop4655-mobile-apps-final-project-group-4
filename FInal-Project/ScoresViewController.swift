@@ -12,6 +12,10 @@ class ScoresViewController: UIViewController {
     var correctAnswers: Int?
     var wrongAnswers: Int?
 
+    
+    @IBOutlet weak var usernameLabel: UILabel!
+    
+    
     @IBOutlet weak var menuButton: UIButton!
     
     @IBOutlet weak var scoreLabel: UILabel!
@@ -21,6 +25,8 @@ class ScoresViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        checkUserAuthentication()
 
         // Access the data
         if let corrects = correctAnswers, let wrongs = wrongAnswers {
@@ -43,4 +49,37 @@ class ScoresViewController: UIViewController {
     }
     */
 
+    @IBAction func onLogOutTapped(_ sender: Any) {
+        showConfirmLogoutAlert()
+    }
+
+    private func showConfirmLogoutAlert() {
+        let alertController = UIAlertController(title: "Log out of your account?", message: nil, preferredStyle: .alert)
+        let logOutAction = UIAlertAction(title: "Log out", style: .destructive) { _ in
+            NotificationCenter.default.post(name: Notification.Name("logout"), object: nil)
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        alertController.addAction(logOutAction)
+        alertController.addAction(cancelAction)
+        present(alertController, animated: true)
+    }
+    
+    
+    func checkUserAuthentication() {
+        if let currentUser = (User.current ) {
+            // The user is logged in
+            let username = currentUser.username ?? "Unknown User"
+            print("User is logged in as \(username)")
+            
+            // Assuming you have a UILabel named usernameLabel
+            usernameLabel.text = "\(username)"
+            
+        } else {
+            // The user is not logged in
+            print("User is not logged in")
+        }
+    }
+    
+    
+    
 }

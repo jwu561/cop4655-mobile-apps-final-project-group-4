@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VzL-H3-mn0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VzL-H3-mn0">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Look around view controllers" minToolsVersion="14.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -15,59 +16,14 @@
             <objects>
                 <viewController title="screen1" id="BYZ-38-t0r" customClass="ViewController" customModule="FInal_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PLH-Vx-bqu">
-                                <rect key="frame" x="50" y="387.66666666666669" width="295" height="35"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="WZ2-aH-7gI"/>
-                                    <constraint firstAttribute="width" constant="295" id="tk3-4k-TsL"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="A) Spain" titleAlignment="center"/>
-                                <connections>
-                                    <action selector="optionBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fS6-7x-xeA"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Do-AR-tBn">
-                                <rect key="frame" x="50" y="452.66666666666669" width="295" height="35"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="ivf-bR-FQf"/>
-                                    <constraint firstAttribute="width" constant="295" id="nhj-pk-Xyr"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="B) France" titleAlignment="center"/>
-                                <connections>
-                                    <action selector="optionBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yf2-SV-UNR"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4dG-Wk-bg3">
-                                <rect key="frame" x="50" y="520.66666666666663" width="295" height="35"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="295" id="Anu-fx-U1A"/>
-                                    <constraint firstAttribute="height" constant="35" id="eYO-Td-Us8"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="C) United States of America" titleAlignment="center"/>
-                                <connections>
-                                    <action selector="optionBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Th-Mt-F4N"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0iC-XQ-VBC">
-                                <rect key="frame" x="50" y="588.66666666666663" width="295" height="35"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="295" id="JQV-vw-zUi"/>
-                                    <constraint firstAttribute="height" constant="35" id="MJ3-2T-Jb8"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="D) Germany" titleAlignment="center"/>
-                                <connections>
-                                    <action selector="optionBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gTp-eg-POk"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Correct" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KpZ-jU-3ar">
-                                <rect key="frame" x="167.66666666666666" y="730" width="58" height="23"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YLO-sH-s9J">
+                                <rect key="frame" x="255.66666666666666" y="487" width="97.333333333333286" height="34.333333333333371"/>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Correct" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KpZ-jU-3ar">
+                                <rect key="frame" x="167" y="776" width="58" height="23"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="58" id="2tB-KJ-2Re"/>
                                     <constraint firstAttribute="height" constant="23" id="gGj-ZT-19u"/>
@@ -77,7 +33,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="no more cities on the list. You have reached the end of the quiz." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kzF-7c-ud8">
-                                <rect key="frame" x="92" y="631.33333333333337" width="210" height="73"/>
+                                <rect key="frame" x="92" y="660.66666666666663" width="210" height="73"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="73" id="cIg-X8-kTK"/>
@@ -97,7 +53,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1. What Country is this?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zg4-Ch-YTv">
-                                <rect key="frame" x="107.33333333333333" y="71" width="178.66666666666669" height="21"/>
+                                <rect key="frame" x="107.33333333333333" y="12" width="178.66666666666669" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="LqK-25-y3S"/>
                                 </constraints>
@@ -106,7 +62,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XKn-94-aim">
-                                <rect key="frame" x="47" y="102" width="300" height="200"/>
+                                <rect key="frame" x="47" y="43" width="300" height="200"/>
                                 <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="rYb-it-JN6"/>
@@ -126,9 +82,48 @@
                                     <action selector="scoresBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UcH-Cj-y2r"/>
                                 </connections>
                             </button>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Tp-FX-ezX">
-                                <rect key="frame" x="77" y="207" width="239" height="127"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uYm-56-sXk">
+                                <rect key="frame" x="237.33333333333334" y="576.33333333333337" width="115.66666666666666" height="34.333333333333371"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0iC-XQ-VBC">
+                                        <rect key="frame" x="0.0" y="0.0" width="115.66666666666667" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="D) Germany" titleAlignment="center"/>
+                                        <connections>
+                                            <action selector="optionBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gTp-eg-POk"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PLH-Vx-bqu">
+                                <rect key="frame" x="53" y="501" width="97.333333333333329" height="34.333333333333336"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="A) Spain" titleAlignment="center"/>
+                                <connections>
+                                    <action selector="optionBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fS6-7x-xeA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4dG-Wk-bg3">
+                                <rect key="frame" x="44" y="576" width="115.66666666666667" height="34.333333333333336"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="C) USA" titleAlignment="center"/>
+                                <connections>
+                                    <action selector="optionBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Th-Mt-F4N"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Do-AR-tBn">
+                                <rect key="frame" x="247" y="501" width="97.333333333333329" height="34.333333333333336"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="B) France" titleAlignment="center"/>
+                                <connections>
+                                    <action selector="optionBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yf2-SV-UNR"/>
+                                </connections>
+                            </button>
+                            <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Tp-FX-ezX">
+                                <rect key="frame" x="77" y="330" width="239" height="97"/>
                                 <connections>
                                     <segue destination="QUP-3F-3rV" kind="embed" id="6mx-xT-mKN"/>
                                 </connections>
@@ -137,28 +132,20 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="0iC-XQ-VBC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="2AM-hP-Xwr"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0iC-XQ-VBC" secondAttribute="trailing" constant="48" id="47r-4p-2hb"/>
+                            <constraint firstItem="kzF-7c-ud8" firstAttribute="top" secondItem="uYm-56-sXk" secondAttribute="bottom" constant="50" id="2gP-TD-huq"/>
                             <constraint firstItem="Zg4-Ch-YTv" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="5CY-Ad-cau"/>
-                            <constraint firstItem="kzF-7c-ud8" firstAttribute="top" secondItem="0iC-XQ-VBC" secondAttribute="bottom" constant="7.6666666666666288" id="5yY-tI-EC4"/>
                             <constraint firstItem="XKn-94-aim" firstAttribute="top" secondItem="Zg4-Ch-YTv" secondAttribute="bottom" constant="10" id="80b-ps-Avx"/>
                             <constraint firstItem="XKn-94-aim" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="47" id="9Zi-bm-k44"/>
                             <constraint firstItem="KpZ-jU-3ar" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="350" id="CUj-jY-RI0"/>
                             <constraint firstItem="Zg4-Ch-YTv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="FWm-AV-gXd"/>
-                            <constraint firstItem="PLH-Vx-bqu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="KFi-Yj-1o4"/>
-                            <constraint firstItem="0iC-XQ-VBC" firstAttribute="top" secondItem="4dG-Wk-bg3" secondAttribute="bottom" constant="33" id="OFs-UN-e2L"/>
                             <constraint firstItem="KpZ-jU-3ar" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Pg8-3N-lWu"/>
-                            <constraint firstItem="0Do-AR-tBn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="Q3D-n0-2Pl"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4dG-Wk-bg3" secondAttribute="trailing" constant="48" id="Qz7-ia-kxP"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PLH-Vx-bqu" secondAttribute="trailing" constant="48" id="Ryy-g7-wDS"/>
-                            <constraint firstItem="4dG-Wk-bg3" firstAttribute="top" secondItem="0Do-AR-tBn" secondAttribute="bottom" constant="33" id="T1q-x7-TAc"/>
-                            <constraint firstItem="4dG-Wk-bg3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="cOP-7w-04p"/>
-                            <constraint firstItem="0Do-AR-tBn" firstAttribute="top" secondItem="PLH-Vx-bqu" secondAttribute="bottom" constant="30" id="eDK-xb-CV4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uYm-56-sXk" secondAttribute="trailing" constant="40" id="X9e-3v-ePy"/>
                             <constraint firstItem="kzF-7c-ud8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="92" id="eLE-H3-b0x"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kzF-7c-ud8" secondAttribute="trailing" constant="91" id="lyw-fu-OBL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YLO-sH-s9J" secondAttribute="trailing" constant="40" id="oZd-Ki-m83"/>
+                            <constraint firstItem="5Tp-FX-ezX" firstAttribute="top" secondItem="XKn-94-aim" secondAttribute="bottom" constant="77" id="qDg-o2-H6W"/>
                             <constraint firstItem="KpZ-jU-3ar" firstAttribute="top" secondItem="kzF-7c-ud8" secondAttribute="bottom" constant="25.670000000000002" id="vnD-DC-QyU"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XKn-94-aim" secondAttribute="trailing" constant="46" id="y0W-AQ-403"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0Do-AR-tBn" secondAttribute="trailing" constant="48" id="ype-YB-ENI"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Screen1" id="P8x-VM-t6g"/>
@@ -180,14 +167,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="798" y="-245"/>
+            <point key="canvasLocation" x="797.70992366412213" y="-245.07042253521129"/>
         </scene>
         <!--Scores-->
         <scene sceneID="rE5-Ro-XsV">
             <objects>
                 <viewController title="Scores" id="JTU-Cb-mpA" customClass="ScoresViewController" customModule="FInal_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TgM-q5-LTi">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gjf-J5-UOH">
@@ -285,7 +272,7 @@
             <objects>
                 <viewController storyboardIdentifier="MenuViewController" title="Game Mode" id="nVd-60-h8F" customClass="MenuViewController" customModule="FInal_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KNd-8h-tfT">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GeoGenius Menu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yYK-CL-JIh">

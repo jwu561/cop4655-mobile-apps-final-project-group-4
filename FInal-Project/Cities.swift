@@ -39,9 +39,9 @@ var Cities = [miami, nyc, sanFran, barca, paris, berlin, tokyo, toronto, london,
 //note: I removed lublin from the above list because it's not working
 //var Cities = [madrid, frank, toronto, montreal, rome, fiorentino]
 
-var miami = City(name: "Miami", latitude: 25.7617, longitude: -80.1918, country: "United States of America", imageUrl: "https://example.com/path/to/miami.jpg")
-var nyc = City(name: "New York City", latitude: 40.75780, longitude: -73.9855, country: "United States of America", imageUrl: "https://example.com/path/to/nyc.jpg")
-var sanFran = City(name: "San Francisco", latitude: 37.7749, longitude: -122.4194, country: "United States of America", imageUrl: "Path to image")
+var miami = City(name: "Miami", latitude: 25.7617, longitude: -80.1918, country: "USA", imageUrl: "https://example.com/path/to/miami.jpg")
+var nyc = City(name: "New York City", latitude: 40.75780, longitude: -73.9855, country: "USA", imageUrl: "https://example.com/path/to/nyc.jpg")
+var sanFran = City(name: "San Francisco", latitude: 37.7749, longitude: -122.4194, country: "USA", imageUrl: "Path to image")
 //51.5007° N, 0.1246° W
 //51.5045° N, 0.0865° W
 var barca = City(name: "Barcelona", latitude: 41.3874, longitude: 2.1686, country: "Spain", imageUrl: "Path to image")
@@ -71,7 +71,7 @@ var cpnhgn = City(name: "Copenhagen", latitude: 55.6761, longitude: 12.5683, cou
 
 var osaka = City(name: "Osaka", latitude: 34.672314, longitude: 135.484802, country: "Japan")
 var dublin = City(name: "Dublin", latitude: 53.9897, longitude: 7.3633, country: "Ireland")
-var tampa = City(name: "Tampa", latitude: 27.964157, longitude: -82.452606, country: "United States of America")
+var tampa = City(name: "Tampa", latitude: 27.964157, longitude: -82.452606, country: "USA")
 var prague = City(name: "Prague", latitude: 50.0755, longitude: 14.4378, country: "Czech Republic")
 var cologne = City(name: "Cologne", latitude: 50.9375, longitude: 6.9603, country: "Germany")
 var jerusalem = City(name: "Jerusalem", latitude: 31.7683, longitude: 35.2137, country: "Israel")
@@ -109,7 +109,7 @@ var lublin = City(name: "Lublin", latitude: 51.2465 , longitude:  22.5684, count
 var madrid = City(name: "Madrid", latitude: 40.4168, longitude: -3.7038, country: "Spain")
 var lisbon = City(name: "Lisbon", latitude: 38.7223, longitude: -9.1393, country: "Portugal")
 var zagreb = City(name: "Zagreb", latitude: 45.8150, longitude: 15.9819, country: "Croatia")
-var amstrdm = City(name: "Amsterdam", latitude: 52.3676, longitude: 4.9041, country: "The Netherlands")
+var amstrdm = City(name: "Amsterdam", latitude: 52.3676, longitude: 4.9041, country: "Netherlands")
 var hong = City(name: "Hong Kong", latitude: 22.3193, longitude: 114.1694, country: "China")
 
 var andorra = City(name: "Andorra la Vella", latitude: 42.5063, longitude: 1.5218, country: "Andorra")
@@ -122,7 +122,7 @@ var frank = City(name: "Frankfurt", latitude: 50.1109, longitude: 8.6821, countr
 
 func nameToCountryCode(_ countryName: String) -> String {
     switch countryName {
-    case "United States of America":
+    case "USA":
         return "US"
     case "Spain":
         return "ES"
@@ -187,7 +187,7 @@ func nameToCountryCode(_ countryName: String) -> String {
         return "AD"
     case "Switzerland":
         return "CH"
-    case "The Netherlands":
+    case "Netherlands":
         return "NL"
     default:
         // Handle cases for other countries if needed

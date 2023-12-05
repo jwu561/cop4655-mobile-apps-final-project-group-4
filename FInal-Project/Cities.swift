@@ -36,7 +36,9 @@ class City: Equatable {
 }
 
 var Cities = [miami, nyc, sanFran, barca, paris, berlin, tokyo, toronto, london, taipei, singapore, athens, sydney, vienna, montreal, cpnhgn, osaka, tampa, prague, cologne, jerusalem, rome, brussels, venice, kristiansand, stockholm, bruges, hiroshima, lyon, helsinki, ottowa, christchurch, jurong, fiorentino, budapest, odense, geneva, vaduz, balzers, gibraltar, warsaw, madrid, lisbon, amstrdm, hong, zagreb, valcia, porto, ljblj, andorra, frank]
+
 //note: I removed lublin from the above list because it's not working
+
 //var Cities = [madrid, frank, toronto, montreal, rome, fiorentino]
 
 var miami = City(name: "Miami", latitude: 25.7617, longitude: -80.1918, country: "United States of America", imageUrl: "https://example.com/path/to/miami.jpg")

@@ -249,6 +249,7 @@
 			mainGroup = 7FE3D1C32ACF1061006E9CF8;
 			packageReferences = (
 				3F0D326A2B169696001F0AF2 /* XCRemoteSwiftPackageReference "Parse-Swift" */,
+				7F5955F42B1E446000EF86A5 /* XCRemoteSwiftPackageReference "SVGKit" */,
 			);
 			productRefGroup = 7FE3D1CD2ACF1061006E9CF8 /* Products */;
 			projectDirPath = "";
@@ -640,6 +641,14 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 4.14.2;
+			};
+		};
+		7F5955F42B1E446000EF86A5 /* XCRemoteSwiftPackageReference "SVGKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SVGKit/SVGKit.git";
+			requirement = {
+				branch = 3.x;
+				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

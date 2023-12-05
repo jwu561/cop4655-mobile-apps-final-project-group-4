@@ -7,7 +7,11 @@
 		<key>FInal-Project.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
+<<<<<<< HEAD
 			<integer>4</integer>
+=======
+			<integer>0</integer>
+>>>>>>> Kevin
 		</dict>
 		<key>ParseSwift (Playground) 1.xcscheme</key>
 		<dict>

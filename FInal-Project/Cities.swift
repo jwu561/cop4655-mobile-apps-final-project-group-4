@@ -5,7 +5,7 @@
 //  Created by Kevin Infante on 11/11/23.
 //
 import Foundation
-import MapKit
+
 //City class, objects will be cities with attributes: name, latitude, longitude, country, etc.
 
 class City: Equatable {
@@ -36,10 +36,10 @@ class City: Equatable {
 }
 
 var Cities = [miami, nyc, sanFran, barca, paris, berlin, tokyo, toronto, london, taipei, singapore, athens, sydney, vienna, montreal, cpnhgn, osaka, tampa, prague, cologne, jerusalem, rome, brussels, venice, kristiansand, stockholm, bruges, hiroshima, lyon, helsinki, ottowa, christchurch, jurong, fiorentino, budapest, odense, geneva, vaduz, balzers, gibraltar, warsaw, lublin, madrid, lisbon, amstrdm, hong, zagreb, valcia, porto, ljblj, andorra, frank]
-//var Cities = [madrid, lisbon, amstrdm, hong, zagreb, valcia, porto, ljblj, andorra, frank]
+//var Cities = [madrid, frank, toronto, montreal, rome, fiorentino]
 
 var miami = City(name: "Miami", latitude: 25.7617, longitude: -80.1918, country: "United States of America", imageUrl: "https://example.com/path/to/miami.jpg")
-var nyc = City(name: "New York City", latitude: 40.7580, longitude: -73.9854, country: "United States of America")
+var nyc = City(name: "New York City", latitude: 40.75780, longitude: -73.9855, country: "United States of America", imageUrl: "https://example.com/path/to/nyc.jpg")
 var sanFran = City(name: "San Francisco", latitude: 37.7749, longitude: -122.4194, country: "United States of America", imageUrl: "Path to image")
 //51.5007° N, 0.1246° W
 //51.5045° N, 0.0865° W

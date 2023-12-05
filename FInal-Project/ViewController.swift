@@ -8,8 +8,9 @@
 import UIKit
 import MapKit
 import Swift
+import WebKit
 
-
+var viewedCities: [City] = []
 // .isEmpty is an array property
 // .count is an array property
 // .first and .last are obvious
@@ -19,23 +20,23 @@ import Swift
 //.removeLast()
 //.remove(at: int)
 //.contains(element) returns true if array contains said alement
-var viewedCities: [City] = []
+
 var currentCity: City?
 var currentQuestion = 1
 
 var correctAnswers = 0
 var wrongAnswers = 0
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, WKNavigationDelegate {
+    
     var hardMode: Bool?
     
     private var lookAroundViewController: MKLookAroundViewController?
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "lookAroundSegue" {
-            if let lookAroundVC = segue.destination as? MKLookAroundViewController {
-                self.lookAroundViewController = lookAroundVC
-                lookAroundVC.view.isUserInteractionEnabled = true
+            if let lookAroundViewController = segue.destination as? MKLookAroundViewController {
+                self.lookAroundViewController = lookAroundViewController
             }
         }
         if segue.identifier == "quizToScores" {
@@ -53,6 +54,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var buttonC: UIButton!
     @IBOutlet weak var buttonD: UIButton!
     
+    //@IBOutlet weak var cityImageView: UIImageView!
     @IBOutlet weak var lookAround: UIButton!
     
     
@@ -63,21 +65,18 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var hintBtn: UIButton!
     
+    @IBOutlet weak var flagWebView: WKWebView!
+    
     
     @IBAction func lookAroundTapped(_ sender: Any) {
-        guard let currentCity = currentCity else {
-            print("Current city is not set.")
-            return
-        }
-
-        if viewedCities.count == Cities.count {
-            print("No more cities on the list. You have reached the end of the quiz.")
+        if(viewedCities.count == Cities.count){
+            print("no more cities on the list. You have reached the end of the quiz.")
+            NomorecityLabel.text = "no more cities on the list. You have reached the end of the quiz."
             feedbackLabel.text = ""
             return
         }
-
-        print("Viewed cities: ", viewedCities.count)
-        fetchLookAroundScene(with: CLLocationCoordinate2D(latitude: currentCity.latitude, longitude: currentCity.longitude))
+        print("viewed cities: ", viewedCities.count)
+        fetchLookAroundScene(with: CLLocationCoordinate2D(latitude: currentCity!.latitude, longitude: currentCity!.longitude))
         performSegue(withIdentifier: "lookAroundSegue", sender: nil)
     }
     
@@ -107,6 +106,7 @@ class ViewController: UIViewController {
             print("correct!")
             correctAnswers = correctAnswers + 1
             feedbackLabel.text = "Correct!"
+            flagWebView.isHidden = true
             
             //increment the question number, change the label
             currentQuestion = currentQuestion + 1
@@ -151,17 +151,22 @@ class ViewController: UIViewController {
         
         Task {
             do {
+                // Issue request
                 guard let lookAroundScene = try await lookAroundSceneRequest.scene else {
                     print("LookAround data is not available for the location.")
                     return
                 }
+                
+                // Assign the scene to the LookAroundViewController
                 lookAroundViewController?.scene = lookAroundScene
+                
+                // Perform the segue
+                //performSegue(withIdentifier: "lookAroundSegue", sender: nil)
             } catch {
                 print("Error fetching LookAround scene: \(error)")
             }
         }
     }
-
     //this function randomizes the multiple choices
     func randomizedChoices(){
         var indexes: [Int] = [1, 2, 3, 4]
@@ -210,27 +215,112 @@ class ViewController: UIViewController {
     
     
     @IBAction func hintBtnTapped(_ sender: Any) {
-        print("hint button tapped")
+        //print("hint button tapped")
         let cc = nameToCountryCode(currentCity!.country)
         print(cc)
+        let urlString = "https://wft-geo-db.p.rapidapi.com/v1/geo/countries/\(cc)?rapidapi-key=" + api_key
+        guard let url = URL(string: urlString) else { return }
+        let request = URLRequest(url: url)
+        
+        DispatchQueue.main.async { [weak self] in
+            // Explicitly hide the webView before loading the new content
+            self?.flagWebView.isHidden = true
+            self?.flagWebView.navigationDelegate = self
+        }
+        
+        let task = URLSession.shared.dataTask(with: request) { [weak self] data, response, error in
+            guard let data = data else { print("❌ Data is nil"); return }
+            do {
+                let jsonDictionary = try JSONSerialization.jsonObject(with: data) as? [String: Any]
+                if let jsonDictionary = jsonDictionary as? [String: Any],
+                    let data = jsonDictionary["data"] as? [String: Any],
+                    let flagImageUri = data["flagImageUri"] as? String,
+                    let imageURL = URL(string: flagImageUri) {
+                    print(flagImageUri)
+
+                    if let flagUrl = URL(string: flagImageUri) {
+                        let req = URLRequest(url: flagUrl)
+                        DispatchQueue.main.async { [weak self] in
+                            self?.flagWebView.load(req)
+                        }
+                    } else {
+                        print("Invalid URL")
+                    }
+                } else {
+                    print("❌ Unable to extract Flag Image URI from JSON")
+                }
+            } catch {
+                print("❌ Error parsing JSON: \(error.localizedDescription)")
+            }
+        }
+        task.resume()
     }
+    // WKNavigationDelegate method to handle when the web view finishes loading
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        // This will be called when the web view finishes loading the request
+        DispatchQueue.main.async { [weak self] in
+            self?.flagWebView.isHidden = false
+        }
+    }
+//            // Make sure we have data
+//            guard let data = data else { print("❌ Data is nil"); return}
+//            do {
+//               let jsonDictionary = try JSONSerialization.jsonObject(with: data) as? [String: Any]
+//               if let jsonDictionary = jsonDictionary as? [String: Any],
+//                   let data = jsonDictionary["data"] as? [String: Any],
+//                   let flagImageUri = data["flagImageUri"] as? String,
+//                   let imageURL = URL(string: flagImageUri) {
+//                   //print(jsonDictionary)
+//                   print(flagImageUri)
+//               } else {
+//                   print("❌ Unable to extract Flag Image URI from JSON")
+//               }
+//           } catch {
+//               print("❌ Error parsing JSON: \(error.localizedDescription)")
+//           }
+        
+        
+        
+        
+        
+        
     
     override func viewDidLoad() {
-        super.viewDidLoad()
+        //reset global variables and refresh other things
         currentCity = Cities.randomElement()
         viewedCities.append(currentCity!)
         randomizedChoices()
+        flagWebView.isHidden = true
+        super.viewDidLoad()
+        
+        
+        //updateCityImage()
         feedbackLabel.text = ""
-  
+        NomorecityLabel.text = ""
         
         if let mode = hardMode {
             print("HARD MODE IS: ", mode)
-            if hardMode == true {
+            if hardMode == true{
                 hintBtn.isHidden = true
             }
         }
     }
     
+//    func updateCityImage() {
+//        guard let imageUrlString = currentCity?.imageUrl,
+//              let imageUrl = URL(string: imageUrlString) else {
+//            print("Invalid image URL")
+//            return
+//        }
+//
+//
+//        URLSession.shared.dataTask(with: imageUrl) { data, response, error in
+//            guard let data = data, let image = UIImage(data: data) else { return }
+//            DispatchQueue.main.async {
+//                self.cityImageView.image = image
+//            }
+//        }.resume()
+//    }
     
 }
 // // previously this was right below func lookAroundTapped
@@ -354,3 +444,5 @@ class ViewController: UIViewController {
 //class MKLookAroundScene {
 //    //opaque class with no properties, it acts as a token that ensures the availability of lookaround imagery for a requested location
 //}
+
+

@@ -27,6 +27,8 @@ class ScoresViewController: UIViewController {
             let correctScore = correctAnswers ?? 0
             let wrongScore = wrongAnswers ?? 0
             let score = correctScore - wrongScore
+            usernameLabel.isHidden = false
+            logOutBtn.isHidden = false
 
             // Update the user's score property
             currentUser.score = score
@@ -69,20 +71,13 @@ class ScoresViewController: UIViewController {
             }
 
             // Update the user label for guests
-            userLabel.text = "Guest:"
+            userLabel.text = "Guest"
+            usernameLabel.isHidden = true
+            logOutBtn.isHidden = true
         }
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
     @IBAction func onLogOutTapped(_ sender: Any) {
         showConfirmLogoutAlert()

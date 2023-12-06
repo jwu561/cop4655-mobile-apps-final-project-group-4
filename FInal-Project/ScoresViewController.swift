@@ -12,31 +12,65 @@ class ScoresViewController: UIViewController {
     var correctAnswers: Int?
     var wrongAnswers: Int?
 
-    
     @IBOutlet weak var usernameLabel: UILabel!
-    
-    
-    @IBOutlet weak var logOutBtn: UIButton!
-    @IBOutlet weak var menuButton: UIButton!
-    
     @IBOutlet weak var scoreLabel: UILabel!
-    
-    @IBAction func menuBtnTapped(_ sender: Any) {
-        performSegue(withIdentifier: "toMenu", sender: nil)
-    }
+    @IBOutlet weak var userLabel: UILabel!
+    @IBOutlet weak var logOutBtn: UIButton!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        checkUserAuthentication()
 
-        // Access the data
-        if let corrects = correctAnswers, let wrongs = wrongAnswers {
-            //statement below is provisional, we may use any other way to calculate score
-            let score = corrects - wrongs
-            scoreLabel.text = "score: \(score)"
-            print("Data from first view controller: \(corrects), \(wrongs)")
-        } else { print("nothing")}
-        // Do any additional setup after loading the view.
+        // Check if the user is logged in
+        if var currentUser = User.current {
+            // User is logged in
+            let userScore = currentUser.score ?? 0
+            let correctScore = correctAnswers ?? 0
+            let wrongScore = wrongAnswers ?? 0
+            let score = correctScore - wrongScore
+
+            // Update the user's score property
+            currentUser.score = score
+            currentUser.save { result in
+                switch result {
+                case .success:
+                    print("User's score updated successfully.")
+
+                    // Now you can use the updated `currentUser` as needed.
+
+                    // Update the score label on the main thread
+                    DispatchQueue.main.async {
+                        self.scoreLabel.text = "User Score: \(currentUser.score ?? 0)"
+                    }
+
+                    // Safely unwrap the username using optional binding
+                    if let username = currentUser.username {
+                        // Update the user label on the main thread
+                        DispatchQueue.main.async {
+                            self.userLabel.text = "User: \(username)"
+                        }
+                    } else {
+                        // Update the user label on the main thread
+                        DispatchQueue.main.async {
+                            self.userLabel.text = "User: Unknown User"
+                        }
+                    }
+                case .failure(let error):
+                    print("Error updating user's score: \(error)")
+                }
+            }
+        } else {
+            // User is not logged in
+            if let corrects = correctAnswers, let wrongs = wrongAnswers {
+                let score = corrects - wrongs
+                scoreLabel.text = "Score: \(score)"
+                print("Data from first view controller: \(corrects), \(wrongs)")
+            } else {
+                scoreLabel.text = "Score: 0"
+            }
+
+            // Update the user label for guests
+            userLabel.text = "Guest:"
+        }
     }
     
 

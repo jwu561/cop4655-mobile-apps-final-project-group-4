@@ -220,9 +220,26 @@ class ViewController: UIViewController, WKNavigationDelegate {
 
     func initializeCurrentCity() {
         currentCity = Cities.randomElement()
+        
+        //if it's not in the "viewedCities" list, then add it
+        if(!viewedCities.contains(currentCity!)){
+            viewedCities.append(currentCity!)
+        }
+        //else, do while loop until current City is not in viewedCities, or until viewedCities contains all cities.
+        else{
+            while(viewedCities.contains(currentCity!) && viewedCities.count != Cities.count){
+                currentCity = Cities.randomElement()
+            }
+            if(viewedCities.count == Cities.count){
+                print("No more cities on the list!")
+                return
+            }
+            else{
+                viewedCities.append(currentCity!)
+            }
+        }
         if let city = currentCity {
             fetchLookAroundScene(with: CLLocationCoordinate2D(latitude: city.latitude, longitude: city.longitude))
-            viewedCities.append(city)  // Track the city as viewed
         }
     }
 

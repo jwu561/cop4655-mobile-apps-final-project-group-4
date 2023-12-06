@@ -205,7 +205,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="user:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kCt-da-xJu">
-                                <rect key="frame" x="24" y="238" width="174" height="21"/>
+                                <rect key="frame" x="24" y="258" width="174" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -221,7 +221,7 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SCOREBOARD" translatesAutoresizingMaskIntoConstraints="NO" id="8fq-nx-Q3F">
-                                <rect key="frame" x="24" y="121" width="345" height="109"/>
+                                <rect key="frame" x="24" y="102" width="345" height="109"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="360_F_362950512_VSCnYZm0krmsTNGTNZFJ7E3oOZTKz7kL" translatesAutoresizingMaskIntoConstraints="NO" id="b81-Xu-coc">
@@ -229,7 +229,14 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="puC-Kg-3s1">
-                                <rect key="frame" x="232" y="238" width="137" height="21"/>
+                                <rect key="frame" x="232" y="257" width="137" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Questions answered:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="19F-QL-Psl">
+                                <rect key="frame" x="24" y="219" width="275" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -242,6 +249,7 @@
                     <navigationItem key="navigationItem" id="bgz-qu-2Qo"/>
                     <connections>
                         <outlet property="logOutBtn" destination="l6R-uA-Zhb" id="9Vg-Er-SPj"/>
+                        <outlet property="questionsLabel" destination="19F-QL-Psl" id="BoH-sX-dBd"/>
                         <outlet property="scoreLabel" destination="puC-Kg-3s1" id="QRT-0u-Wcw"/>
                         <outlet property="userLabel" destination="kCt-da-xJu" id="27J-le-fzC"/>
                         <outlet property="usernameLabel" destination="gjf-J5-UOH" id="GqB-GZ-eCH"/>

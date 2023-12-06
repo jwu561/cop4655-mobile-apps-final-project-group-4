@@ -11,15 +11,20 @@ import ParseSwift
 class ScoresViewController: UIViewController {
     var correctAnswers: Int?
     var wrongAnswers: Int?
+    var questions: Int?
 
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var userLabel: UILabel!
     @IBOutlet weak var logOutBtn: UIButton!
 
+    @IBOutlet weak var questionsLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        if let corrects = correctAnswers, let quests = questions {
+            questionsLabel.text = "Questions answered: \(corrects) out of \(quests)"
+        }
         // Check if the user is logged in
         if var currentUser = User.current {
             // User is logged in

@@ -44,6 +44,12 @@ class ViewController: UIViewController, WKNavigationDelegate {
             if let scoresVC = segue.destination as? ScoresViewController {
                 scoresVC.correctAnswers = correctAnswers
                 scoresVC.wrongAnswers = wrongAnswers
+                if hardMode == true {
+                    scoresVC.questions = Cities.count
+                }
+                else {
+                    scoresVC.questions = 10
+                }
             }
         }
     }
@@ -74,7 +80,7 @@ class ViewController: UIViewController, WKNavigationDelegate {
     
     @IBAction func optionBtnTapped(_ sender: UIButton){
         if(viewedCities.count == Cities.count ||
-           (hardMode == false && viewedCities.count > 9)) {
+           (hardMode == false && correctAnswers > 9)) {
             print("You have reached the end.")
             NomorecityLabel.text = "You have reached the end."
             feedbackLabel.text = ""
@@ -90,6 +96,10 @@ class ViewController: UIViewController, WKNavigationDelegate {
             correctAnswers += 1
             feedbackLabel.text = "Correct!"
             flagWebView.isHidden = true
+            if (hardMode == false && correctAnswers > 9){
+                performSegue(withIdentifier: "quizToScores", sender: nil)
+                return
+            }
             
             currentQuestion += 1
             questionLabel.text = "\(currentQuestion). What country is this?"

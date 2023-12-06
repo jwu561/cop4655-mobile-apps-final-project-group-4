@@ -35,15 +35,15 @@ class City: Equatable {
     }
 }
 
-var Cities = [miami, nyc, sanFran, barca, paris, berlin, tokyo, toronto, london, taipei, singapore, athens, sydney, vienna, montreal, cpnhgn, osaka, tampa, prague, cologne, jerusalem, rome, brussels, venice, kristiansand, stockholm, bruges, hiroshima, lyon, helsinki, ottowa, christchurch, jurong, fiorentino, budapest, geneva, vaduz, balzers, gibraltar, warsaw, madrid, lisbon, amstrdm, hong, zagreb, valcia, porto, ljblj, andorra, frank, hamburg, la, marseille, hague]
+var Cities = [miami, nyc, sanFran, barca, paris, berlin, tokyo, toronto, london, taipei, singapore, athens, sydney, vienna, montreal, cpnhgn, osaka, tampa, prague, cologne, jerusalem, rome, brussels, venice, kristiansand, stockholm, bruges, hiroshima, lyon, helsinki, ottowa, christchurch, jurong, fiorentino, budapest, geneva, vaduz, balzers, gibraltar, warsaw, madrid, lisbon, amstrdm, hong, zagreb, valcia, porto, ljblj, andorra, frank, hamburg, la, marseille, hague,toulouse, seville, gothenburg, malmo, aarhus, kyoto, coimbra, munich, chicago, dub, salz, melbourne, milan, naples, thess, edin]
 
 //note: I removed lublin and odense from the above list because not working
 
-//var Cities = [hamburg, la, marseille, hague, frank]
+//var Cities = [toulouse, seville, thess, edin]
 
-var miami = City(name: "Miami", latitude: 25.7617, longitude: -80.1918, country: "USA", imageUrl: "https://example.com/path/to/miami.jpg")
-var nyc = City(name: "New York City", latitude: 40.75780, longitude: -73.9855, country: "USA", imageUrl: "https://example.com/path/to/nyc.jpg")
-var sanFran = City(name: "San Francisco", latitude: 37.7749, longitude: -122.4194, country: "USA", imageUrl: "Path to image")
+var miami = City(name: "Miami", latitude: 25.7617, longitude: -80.1918, country: "United States of America", imageUrl: "https://example.com/path/to/miami.jpg")
+var nyc = City(name: "New York City", latitude: 40.75780, longitude: -73.9855, country: "United States of America", imageUrl: "https://example.com/path/to/nyc.jpg")
+var sanFran = City(name: "San Francisco", latitude: 37.7749, longitude: -122.4194, country: "United States of America", imageUrl: "Path to image")
 //51.5007° N, 0.1246° W
 //51.5045° N, 0.0865° W
 var barca = City(name: "Barcelona", latitude: 41.3874, longitude: 2.1686, country: "Spain", imageUrl: "Path to image")
@@ -73,7 +73,7 @@ var cpnhgn = City(name: "Copenhagen", latitude: 55.6761, longitude: 12.5683, cou
 
 var osaka = City(name: "Osaka", latitude: 34.672314, longitude: 135.484802, country: "Japan")
 var dublin = City(name: "Dublin", latitude: 53.9897, longitude: 7.3633, country: "Ireland")
-var tampa = City(name: "Tampa", latitude: 27.964157, longitude: -82.452606, country: "USA")
+var tampa = City(name: "Tampa", latitude: 27.964157, longitude: -82.452606, country: "United States of America")
 var prague = City(name: "Prague", latitude: 50.0755, longitude: 14.4378, country: "Czech Republic")
 var cologne = City(name: "Cologne", latitude: 50.9375, longitude: 6.9603, country: "Germany")
 var jerusalem = City(name: "Jerusalem", latitude: 31.7683, longitude: 35.2137, country: "Israel")
@@ -125,15 +125,39 @@ var la = City(name: "Los Angeles", latitude: 34.0522, longitude: -118.2437, coun
 var hague = City(name: "The Hague", latitude: 52.0705, longitude: 4.3007, country: "The Netherlands")
 var marseille = City(name: "Marseille", latitude: 43.2965, longitude: 5.3698, country: "France")
 
-//these 2 cities are working
-var milan = City(name: "Milan", latitude: 45.4642, longitude: 9.1900, country: "Italy")
+var toulouse = City(name: "Toulouse", latitude: 43.6050, longitude: 1.4450, country: "France")
+var seville = City(name: "Seville", latitude: 37.3858, longitude: -5.9931, country: "Spain")
+var gothenburg = City(name: "Gothenburg", latitude: 57.7089, longitude: 11.9746, country: "Sweden")
+var malmo = City(name: "Malmo", latitude: 55.6044, longitude: 13.0034, country: "Sweden")
+var aarhus = City(name: "Aarhus", latitude: 56.1629, longitude: 10.2039, country: "Denmark")
+
+var kyoto = City(name: "Kyoto", latitude: 35.0116, longitude: 135.7681, country: "Japan")
+var coimbra = City(name: "Coimbra", latitude: 40.2033, longitude: -8.4103, country: "Portugal")
+var munich = City(name: "Munich", latitude: 48.1351, longitude: 11.5820, country: "Germany")
+//var birmingham = City(name: "Birmingham", latitude: 52.4862, longitude: -1.8904, country: "United Kingdom")
+//var manch = City(name: "Manchester", latitude: 53.4830, longitude: -2.2446, country: "United Kingdom")
+
+var chicago = City(name: "Chicago", latitude: 41.8781, longitude: -87.6298, country: "United States of America")
+var dub = City(name: "Dublin", latitude: 53.3498, longitude: -6.2603, country: "Ireland")
+var salz = City(name: "Salzburg", latitude: 47.8095, longitude: 13.0550, country: "Austria")
+var melbourne = City(name: "Melbourne", latitude: -37.8136, longitude: 144.9631, country: "Australia")
+
+
+var milan = City(name: "Milan", latitude: 45.4641, longitude: 9.1919, country: "Italy")
+var naples = City(name: "Naples", latitude: 40.8522, longitude: 14.2681, country: "Italy")
+
+var thess = City(name: "Thessaloniki", latitude: 40.6401, longitude: 22.9444, country: "Greece")
+var edin = City(name: "Edinburgh", latitude: 55.9533, longitude: -3.1883, country: "United Kingdom")
+
+//not working
 var florence = City(name: "Florence", latitude: 43.7696, longitude: 11.2558, country: "Italy")
+
 
 
 
 func nameToCountryCode(_ countryName: String) -> String {
     switch countryName {
-    case "USA":
+    case "United States of America":
         return "US"
     case "Spain":
         return "ES"

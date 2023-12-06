@@ -75,8 +75,8 @@ class ViewController: UIViewController, WKNavigationDelegate {
     @IBAction func optionBtnTapped(_ sender: UIButton){
         if(viewedCities.count == Cities.count ||
            (hardMode == false && viewedCities.count > 9)) {
-            print("no more cities on the list. You have reached the end.")
-            NomorecityLabel.text = "no more cities on the list. You have reached the end."
+            print("You have reached the end.")
+            NomorecityLabel.text = "You have reached the end."
             feedbackLabel.text = ""
             performSegue(withIdentifier: "quizToScores", sender: nil)
             return

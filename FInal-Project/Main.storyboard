@@ -269,7 +269,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="bgz-qu-2Qo"/>
                     <connections>
-                        <outlet property="logOutBtn" destination="l6R-uA-Zhb" id="Liw-Yw-pnO"/>
                         <outlet property="scoreLabel" destination="puC-Kg-3s1" id="QRT-0u-Wcw"/>
                         <outlet property="usernameLabel" destination="gjf-J5-UOH" id="GqB-GZ-eCH"/>
                         <segue destination="nVd-60-h8F" kind="show" identifier="toMenu" id="awL-nr-hch"/>
@@ -635,7 +634,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="awL-nr-hch"/>
         <segue reference="IJr-0v-8I1"/>
-        <segue reference="rrl-P6-pPd"/>
+        <segue reference="1G1-Bq-8Mw"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="SCOREBOARD" width="730" height="200"/>

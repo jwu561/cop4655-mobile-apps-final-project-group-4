@@ -33,6 +33,8 @@ struct User: ParseUser {
     // TODO: Pt 2 - Add custom property for `lastPostedDate`
     
     var lastPostedDate: Date?
+    
+    var score: Int?
 
 
 }

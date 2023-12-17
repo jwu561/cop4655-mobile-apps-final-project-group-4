@@ -18,7 +18,7 @@ Jonathan Wu
 
 ## Overview
 Demo video:
-[![GeoGenius Demo](https://img.youtube.com/vi/PYKoiFgEv18/0.jpg)](https://www.youtube.com/watch?v=PYKoiFgEv18)
+[![GeoGenius Demo](https://img.youtube.com/vi/gXsdycG5lG8/0.jpg)](https://www.youtube.com/watch?v=gXsdycG5lG8)
 
 https://www.youtube.com/watch?v=PYKoiFgEv18
 
